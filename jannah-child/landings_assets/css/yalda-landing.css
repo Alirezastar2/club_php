@@ -103,7 +103,7 @@ body {
     height: auto;
     margin: 0 auto 32px;
   }
-  
+
   .hero-banner img {
     width: 100%;
     height: auto;
@@ -116,7 +116,7 @@ body {
   .hero-banner {
     height: 451px;
   }
-  
+
   .hero-banner img {
     object-fit: cover;
     height: 451px;
@@ -159,7 +159,7 @@ body {
     width: 60px;
     height: 60px;
   }
-  
+
   /* کاپشن - بالا چپ (10 o'clock) */
   .mobile-icon-bluvotelat {
     top: 300px;
@@ -167,7 +167,7 @@ body {
     width: 60px;
     height: 60px;
   }
-  
+
   /* لاستیک - پایین راست (4 o'clock) */
   .mobile-icon-khodro {
     top: 420px;
@@ -175,7 +175,7 @@ body {
     width: 60px;
     height: 60px;
   }
-  
+
   /* چراغ راهنما - وسط راست (3 o'clock) */
   .mobile-icon-karpi {
     top: 360px;
@@ -183,7 +183,7 @@ body {
     width: 60px;
     height: 60px;
   }
-  
+
   /* چتر با ماشین - بالا راست (2 o'clock) */
   .mobile-icon-bime {
     top: 300px;
@@ -191,7 +191,7 @@ body {
     width: 60px;
     height: 60px;
   }
-  
+
   /* سیم‌کارت - پایین چپ (8 o'clock) */
   .mobile-icon-internet {
     top: 420px;
@@ -267,12 +267,12 @@ body {
     max-width: 360px;
     height: auto;
   }
-  
+
   .service-item {
     width: 165.5px;
     height: 128px;
   }
-  
+
   .service-item img {
     width: 100%;
     height: 100%;
@@ -286,12 +286,12 @@ body {
     max-width: 840px;
     gap: 20px;
   }
-  
+
   .service-item {
     width: 100%;
     height: auto;
   }
-  
+
   .service-item img {
     width: 100%;
     height: 100%;
@@ -399,7 +399,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #182460;
+  background: #ffffff;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -412,7 +412,7 @@ body {
     height: auto;
     max-height: 90vh;
     border-radius: 16px;
-    background: #182460;
+    background: #ffffff;
     margin: auto;
   }
 }
@@ -425,7 +425,7 @@ body {
   height: 32px;
   border: none;
   background: transparent;
-  color: #ffffff;
+  color: #000000;
   font-size: 32px;
   line-height: 1;
   cursor: pointer;
@@ -452,7 +452,7 @@ body {
   font-size: 16px;
   line-height: 100%;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
   margin: 0 0 16px;
   padding-bottom: 16px;
 }
@@ -468,27 +468,27 @@ body {
 }
 
 .yalda-modal-banner--internet {
-  background-image: url('https://club.snapp.ir/wp-content/uploads/2025/12/اینترنت.webp');
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/اینترنت.webp");
 }
 
 .yalda-modal-banner--ajil {
-  background-image: url('https://club.snapp.ir/wp-content/uploads/2025/12/آجیل-.webp');
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/آجیل-.webp");
 }
 
 .yalda-modal-banner--clothes {
-  background-image: url('https://club.snapp.ir/wp-content/uploads/2025/12/پوشاک.webp');
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/پوشاک.webp");
 }
 
 .yalda-modal-banner--insurance {
-  background-image: url('https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه.webp');
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه.webp");
 }
 
 .yalda-modal-banner--toll {
-  background-image: url('https://club.snapp.ir/wp-content/uploads/2025/12/خلافی.webp');
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/خلافی.webp");
 }
 
 .yalda-modal-banner--car {
-  background-image: url('https://club.snapp.ir/wp-content/uploads/2025/12/خودرویی.webp');
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/خودرویی.webp");
 }
 
 .yalda-modal-body {
@@ -503,7 +503,7 @@ body {
   line-height: 24px;
   text-align: right;
   text-align: justify;
-  color: #ffffff;
+  color: #000000;
   margin: 0 0 16px;
 }
 
@@ -513,7 +513,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
   margin: 16px 0 8px;
 }
 
@@ -523,7 +523,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
   margin: 0 0 16px;
   padding-right: 20px;
   list-style: disc;
@@ -543,7 +543,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   text-align: right;
-  color: #ffffff;
+  color: #000000;
   margin: 0 0 8px;
 }
 
@@ -553,6 +553,9 @@ body {
   gap: 8px;
   margin-bottom: 16px;
   direction: rtl;
+  background: #575EFF1F;
+  border-radius: 10px;
+  padding: 8px;
 }
 
 .yalda-code-input {
@@ -563,32 +566,39 @@ body {
   border-radius: 10px;
   font-family: IRANSansX;
   font-size: 14px;
-  color: #182460;
-  text-align: right;
+  color: #666666;
+  text-align: center;
 }
 
 .yalda-code-copy {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   padding: 12px 16px;
-  background: #7B3FE4;
+  background: transparent;
   border: none;
   border-radius: 10px;
-  color: #ffffff;
+  color: #575EFF;
+  text-align: center;
   font-family: IRANSansX;
   font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
 }
 
 .yalda-code-copy:hover {
-  background: #6B2FD4;
+  opacity: 0.7;
 }
 
 .yalda-code-copy-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%) invert(47%) sepia(100%) saturate(2000%) hue-rotate(235deg) brightness(1.2) contrast(1.1);
 }
 
 .yalda-modal-footer {
@@ -599,7 +609,7 @@ body {
 .yalda-modal-cta {
   width: 100%;
   padding: 16px;
-  background: #7B3FE4;
+  background: #0048d9;
   border: none;
   border-radius: 12px;
   color: #ffffff;
@@ -611,7 +621,7 @@ body {
 }
 
 .yalda-modal-cta:hover {
-  background: #6B2FD4;
+  background: #0038b8;
 }
 
 /* Specific modal text styles */
