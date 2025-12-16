@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست صفحه پشتیبانی آنلاین</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Vazir Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet"
+        type="text/css" />
+
+    <style>
+        /* استایل‌های اصلی صفحه */
+        body {
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .test-header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .test-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+
+        .test-info h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .test-info ul {
+            margin: 0;
+            padding-right: 1.5rem;
+        }
+
+        .test-info li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* استایل‌های صفحه پشتیبانی */
+        .online-support-page {
+            background: #eef0f7;
+            min-height: 100vh;
+            font-family: "Vazir", "Tahoma", sans-serif;
+            color: #333;
+        }
+
+        .support-container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .support-header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            background: #ffffff;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .support-header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .support-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+
+        .support-header p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .support-header-icon {
+            width: 376px;
+            height: 271px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .support-header-icon img {
+            width: 376px;
+            height: 271px;
+            object-fit: contain;
+        }
+
+        .support-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 0 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* دسکتاپ - نمایش کارت‌ها در چند ستون */
+        @media (min-width: 1024px) {
+            .support-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
+                gap: 2rem;
+                padding: 0 3rem;
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* تبلت - نمایش کارت‌ها در دو ستون */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .support-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                padding: 0 3rem;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .support-card {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            text-align: right;
+            width: 100%;
+            height: 106px;
+            margin: 0;
+        }
+
+        .support-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .support-card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .support-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .support-card-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            order: 2;
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        .support-card-icon .svg-icon {
+            width: 45px;
+            height: 45px;
+            filter: none;
+            transition: all 0.3s ease;
+        }
+
+        /* مودال‌ها - تمام عرض */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.modal-open {
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: white;
+            margin: 0;
+            border-radius: 0;
+            width: 100%;
+            height: 100vh;
+            max-width: none;
+            max-height: none;
+            overflow-y: auto;
+            position: relative;
+            transform: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: none;
+        }
+
+        .modal.modal-open .modal-content {
+            transform: none;
+        }
+
+        .modal-header {
+            background: #ffffff;
+            color: #333;
+            padding: 2rem;
+            border-radius: 0;
+            text-align: right;
+            position: relative;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            text-align: right;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            background: transparent;
+            color: #333;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-icon {
+            width: 112px;
+            height: 112px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 28px auto;
+        }
+
+        .modal-icon .svg-icon {
+            width: 112px;
+            height: 112px;
+            filter: none;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-content-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+
+        .modal-content-list li {
+            padding: 0.75rem 0;
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .modal-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+        }
+
+        .modal-btn-primary {
+            background: #007bff;
+            color: white;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+            width: 342px;
+        }
+
+        .modal-btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+        }
+
+        .modal-btn-secondary {
+            background: transparent;
+            color: #007bff;
+            border: none;
+            box-shadow: none;
+        }
+
+        .modal-btn-secondary:hover {
+            background: transparent;
+            color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Vazir', 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .test-header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .test-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+        }
+
+        .test-info h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .test-info ul {
+            margin: 0;
+            padding-right: 1.5rem;
+        }
+
+        .test-info li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== استایل مینیمال باکس اطلاع‌رسانی تست ===== */
+        .post-grid-info-box {
+            padding: 24px 24px 48px;
+        }
+
+        .post-grid-info-box .info-box {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 24px;
+            text-align: right;
+        }
+
+        .post-grid-info-box .info-box-title {
+            color: #1f2937;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .post-grid-info-box .info-box-subtitle {
+            color: #4b5563;
+            font-size: 14px;
+            margin: 0 0 12px 0;
+        }
+
+        .post-grid-info-box .info-box-list {
+            margin: 0 0 20px 0;
+            padding: 0 20px 0 0;
+        }
+
+        .post-grid-info-box .info-box-list li {
+            margin: 6px 0;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .post-grid-info-box .info-box-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .post-grid-info-box .info-box-btn {
+            display: flex;
+            height: 40px;
+            padding: 8px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex: 1 0 0;
+            background: #2f57eb;
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            max-width: 342px;
+        }
+
+        .post-grid-info-box .info-box-btn:hover {
+            background: #2546c5;
+        }
+
+        /* موبایل: دکمه آبی تمام‌عرض و مشابه دسکتاپ */
+        @media (max-width: 768px) {
+            .post-grid-info-box .info-box-btn {
+                width: 100%;
+                max-width: none;
+                flex: 0 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-header">
+        <h1>🧪 تست صفحه پشتیبانی آنلاین</h1>
+        <p>این صفحه برای تست عملکرد و بررسی مشکلات طراحی شده است</p>
+    </div>
+
+    <div class="test-info">
+        <h3>📋 چک‌لیست تست:</h3>
+        <ul>
+            <li>✅ فونت Vazir لود شده</li>
+            <li>✅ Font Awesome آیکون‌ها نمایش داده می‌شوند</li>
+            <li>✅ CSS فایل لود شده</li>
+            <li>✅ طراحی ریسپانسیو کار می‌کند</li>
+            <li>✅ مودال‌ها باز و بسته می‌شوند</li>
+            <li>✅ انیمیشن‌ها نرم اجرا می‌شوند</li>
+            <li>✅ کلیدهای کیبورد کار می‌کنند (ESC برای بستن مودال)</li>
+            <li>✅ در موبایل به درستی نمایش داده می‌شود</li>
+            <li>✅ آیکون اصلی با اندازه 376×271 پیکسل نمایش داده می‌شود</li>
+            <li>✅ کارت‌ها با اندازه 342×106 پیکسل و padding 16px نمایش داده می‌شوند</li>
+            <li>✅ فاصله بین آیکون و متن در کارت‌ها 16px است</li>
+            <li>✅ شعاع گوشه کارت‌ها 16px است</li>
+            <li>✅ مودال "تغییر عکس پروفایل" با هدر سفید و آیکون 112×112 پیکسل</li>
+            <li>✅ دکمه "انجام درخواست در اپلیکیشن" آبی با padding 0.75rem 1.5rem و min-width 120px</li>
+            <li>✅ دکمه "آموزش مرحله به مرحله" بدون کادر و فقط متن آبی</li>
+            <li>✅ کلمات کلیدی در محتوای مودال بولد شده‌اند</li>
+            <li>✅ آیکون مودال 28 پیکسل از بالا و پایین فاصله دارد</li>
+            <li>✅ علامت بستن مودال در سمت چپ قرار دارد</li>
+        </ul>
+    </div>
+
+    <!-- محتوای اصلی صفحه -->
+    <div class="online-support-page">
+        <div class="support-container">
+            <!-- هدر جدید مطابق فیگما -->
+            <div class="support-header">
+                <div class="support-header-content">
+                    <div class="support-header-icon">
+                        <img src="../Icon_Kayako/20220703-Kayako 1.svg" alt="پشتیبانی آنلاین" class="svg-icon">
+                    </div>
+                    <h1>خدمات پشتیبانی، حالا در اپلیکیشن شما</h1>
+                    <p>کاربر راننده عزیز، می‌توانید برخی فعالیت‌هایی که پیش از این، از طریق صفحه خدمات غیرحضوری برایشان
+                        درخواست ثبت می‌کردید را به طور مستقیم در اپلیکیشن کاربر راننده اسنپ و اسنپ باکس انجام دهید. در
+                        ادامه فهرست این خدمات و مسیر دسترسی به آنها را مشاهده می‌کنید.</p>
+                    <p class="support-note">توجه داشته باشید برای مواردی که همچنان نیاز به «ثبت درخواست» در بخش خدمات
+                        غیرحضوری دارند,
+                        می‌توانید از لینک انتهای این صفحه اقدام کنید.</p>
+                </div>
+            </div>
+
+            <!-- عنوان اسنپ -->
+            <div class="support-header"
+                style="background: transparent; box-shadow: none; border: none; margin: 0; padding: 26px 0;">
+                <div class="support-header-content" style="text-align: right; margin: 0; padding: 0 24px 0 24px;">
+                    <h1
+                        style="color: var(--text-black, #404040); text-align: right; font-family: IRANSansX; font-size: 19px; font-style: normal; font-weight: 500; line-height: 171.022%; letter-spacing: 0.029px; margin: 0; padding: 0;">
+                        اسنپ</h1>
+                </div>
+            </div>
+
+            <!-- گرید منوهای اصلی -->
+            <div class="support-grid" style="margin-bottom: 0;">
+                <div class="support-card" data-modal="profile-contact"
+                    style="--card-color: #3DA65C; --card-color-light: #4CAF50">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/profile.svg" alt="تغییر عکس پروفایل" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تغییر عکس پروفایل</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="mobile-number"
+                    style="--card-color: #FF6B35; --card-color-light: #FF8A65">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Change mobile number.svg" alt="تغییر شماره موبایل" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تغییر شماره موبایل</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="documents"
+                    style="--card-color: #4A90E2; --card-color-light: #64B5F6">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Completion of documents.svg" alt="تکمیل مدارک" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تکمیل مدارک</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="service-change"
+                    style="--card-color: #9B59B6; --card-color-light: #BA68C8">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/User service change.svg" alt="تغییر سرویس کاربری" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تغییر سرویس کاربری</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="status-register"
+                    style="--card-color: #27AE60; --card-color-light: #66BB6A">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Registration of disability status.svg" alt="ثبت وضعیت مطلوب"
+                            class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">ثبت وضعیت مطلوب</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="unpaid-fare"
+                    style="--card-color: #E74C3C; --card-color-light: #EF5350">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Unpaid rent.svg" alt="کرایه پرداخت نشده" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">کرایه پرداخت نشده</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="lost-items"
+                    style="--card-color: #F39C12; --card-color-light: #FFB74D">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Objects left in the car.svg" alt="اشیاء جامانده در خودرو"
+                            class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">اشیاء جامانده در خودرو</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="app-support"
+                    style="--card-color: #3498DB; --card-color-light: #42A5F5">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/In-app support.svg" alt="پشتیبانی داخل اپلیکیشن" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">پشتیبانی داخل اپلیکیشن</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- بخش اسنپ باکس -->
+    <div class="online-support-page" style="margin-top: 0; padding-top: 0;">
+        <div class="support-container">
+            <div class="support-header"
+                style="background: transparent; box-shadow: none; border: none; margin: 0; padding: 26px 0;">
+                <div class="support-header-content" style="text-align: right; margin: 0; padding: 0 24px 0 24px;">
+                    <h1
+                        style="color: var(--text-black, #404040); text-align: right; font-family: IRANSansX; font-size: 19px; font-style: normal; font-weight: 500; line-height: 171.022%; letter-spacing: 0.029px; margin: 0; padding: 0;">
+                        اسنپ باکس</h1>
+                </div>
+            </div>
+
+            <!-- گرید منوهای اسنپ باکس -->
+            <div class="support-grid" style="margin-bottom: 0;">
+                <div class="support-card" data-modal="snappbox-profile-contact"
+                    style="--card-color: #3DA65C; --card-color-light: #4CAF50">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Change profile picture-box.svg" alt="تغییر عکس پروفایل"
+                            class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تغییر عکس پروفایل</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="snappbox-mobile-number"
+                    style="--card-color: #FF6B35; --card-color-light: #FF8A65">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Changing the mobile number - box.svg" alt="تغییر شماره موبایل"
+                            class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تغییر شماره موبایل</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="snappbox-documents"
+                    style="--card-color: #4A90E2; --card-color-light: #64B5F6">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Completion of documents - box.svg" alt="تکمیل مدارک" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تکمیل مدارک</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="snappbox-service-change"
+                    style="--card-color: #9B59B6; --card-color-light: #BA68C8">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Change user service-box.svg" alt="تغییر سرویس کاربری" class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">تغییر سرویس کاربری</h3>
+                    </div>
+                </div>
+
+                <div class="support-card" data-modal="snappbox-app-support"
+                    style="--card-color: #3498DB; --card-color-light: #42A5F5">
+                    <div class="support-card-icon">
+                        <img src="../Icon_Kayako/Support inside the application-box.svg" alt="پشتیبانی داخل برنامه"
+                            class="svg-icon">
+                    </div>
+                    <div class="support-card-content">
+                        <h3 class="support-card-title">پشتیبانی داخل برنامه</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- باکس اطلاع‌رسانی/لینک ثبت درخواست (پس از اسنپ باکس) -->
+            <section class="post-grid-info-box" aria-labelledby="test-post-grid-info-title">
+                <div class="info-box">
+                    <div class="info-box-header">
+                        <h2 id="test-post-grid-info-title" class="info-box-title">اسنپ و اسنپ‌باکس</h2>
+                        <p class="info-box-subtitle">فهرست موضوعات زیر را از طریق «ثبت درخواست» در بخش خدمات غیرحضوری
+                            پیگیری کنید:</p>
+                    </div>
+                    <ul class="info-box-list">
+                        <li>عدم تطابق اطلاعات</li>
+                        <li>غیرفعالی پلاک تکراری</li>
+                        <li>احراز هویت</li>
+                        <li>فیش واریز جریمه</li>
+                        <li>گواهی عدم سوءپیشینه</li>
+                        <li>تکمیل نقص مدارک (در زمان غیرفعالی)</li>
+                        <li>غیرفعالی بازدید خودرو</li>
+                        <li>اصلاح قرارداد</li>
+                        <li>تغییر وسیله نقلیه (ویژه اسنپ‌باکس)</li>
+                    </ul>
+                    <div class="info-box-actions">
+                        <a class="info-box-btn" href="https://esupport-ticket.snapp.ir/login" target="_blank"
+                            rel="noopener">ثبت درخواست</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- مودال‌ها -->
+    <div id="modal-profile-contact" class="modal" data-modal="profile-contact">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تغییر عکس پروفایل</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/profile.svg" alt="تغییر عکس پروفایل" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>۱. در صفحه اول اپلیکیشن روی گزینه <strong>سه خط</strong> بالا سمت راست بزنید.</li>
+                    <li>۲. روی تصویر پروفایلتان زده و گزینه «<strong>ویرایش</strong>» را انتخاب کنید.</li>
+                    <li>۳. روی علامت <strong>قلم کنار عکس پروفایل</strong> بزنید و عکس سلفی بگیرید.</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/OpenApp" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-secondary">آموزش مرحله به
+                        مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-mobile-number" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تغییر شماره موبایل</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Change mobile number.svg" alt="تغییر شماره موبایل" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>۱. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>۲. به بخش تنظیمات بروید</li>
+                    <li>۳. روی "تغییر شماره موبایل" کلیک کنید</li>
+                    <li>۴. شماره جدید را وارد کنید</li>
+                    <li>۵. کد تایید را وارد کنید</li>
+                    <li>۶. تغییرات را تایید کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/OpenApp" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-secondary">آموزش مرحله به
+                        مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-documents" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تکمیل مدارک</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Completion of documents.svg" alt="تکمیل مدارک" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای تکمیل مدارک خود:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "مدارک" بروید</li>
+                    <li>3. مدارک ناقص را شناسایی کنید</li>
+                    <li>4. عکس مدارک را آپلود کنید</li>
+                    <li>5. منتظر تایید بمانید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/snapp-documents" class="modal-btn modal-btn-primary">ورود به
+                        اپلیکیشن</a>
+                    <a href="#" class="modal-btn modal-btn-secondary">مشاهده راهنما</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-service-change" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تغییر سرویس کاربری</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/User service change.svg" alt="تغییر سرویس کاربری" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای تغییر سرویس کاربری:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "تنظیمات سرویس" بروید</li>
+                    <li>3. سرویس مورد نظر را انتخاب کنید</li>
+                    <li>4. شرایط جدید را مطالعه کنید</li>
+                    <li>5. تغییرات را تایید کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="#" class="modal-btn modal-btn-secondary">آموزش مرحله به مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-status-register" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">ثبت وضعیت مطلوب</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Registration of disability status.svg" alt="ثبت وضعیت مطلوب"
+                        class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای ثبت وضعیت مطلوب:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "وضعیت" بروید</li>
+                    <li>3. وضعیت مطلوب را انتخاب کنید</li>
+                    <li>4. جزئیات را تکمیل کنید</li>
+                    <li>5. وضعیت را ذخیره کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="#" class="modal-btn modal-btn-secondary">آموزش مرحله به مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-unpaid-fare" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">کرایه پرداخت نشده</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Unpaid rent.svg" alt="کرایه پرداخت نشده" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای پیگیری ارایه پرداخت نشده:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "پرداخت‌ها" بروید</li>
+                    <li>3. ارایه پرداخت نشده را انتخاب کنید</li>
+                    <li>4. جزئیات سفر را بررسی کنید</li>
+                    <li>5. درخواست پیگیری ثبت کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="#" class="modal-btn modal-btn-secondary">آموزش مرحله به مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-lost-items" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">اشیاء جامانده در خودرو</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Objects left in the car.svg" alt="اشیاء جامانده در خودرو" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای گزارش اشیاء جامانده:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "سفرهای اخیر" بروید</li>
+                    <li>3. سفر مورد نظر را انتخاب کنید</li>
+                    <li>4. روی "گزارش اشیاء جامانده" کلیک کنید</li>
+                    <li>5. جزئیات را وارد کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="#" class="modal-btn modal-btn-secondary">آموزش مرحله به مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-app-support" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">پشتیبانی داخل اپلیکیشن</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/In-app support.svg" alt="پشتیبانی داخل اپلیکیشن" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای دریافت پشتیبانی:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "پشتیبانی" بروید</li>
+                    <li>3. موضوع مورد نظر را انتخاب کنید</li>
+                    <li>4. مشکل خود را توضیح دهید</li>
+                    <li>5. درخواست را ارسال کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/mainpage" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="#" class="modal-btn modal-btn-secondary">آموزش مرحله به مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال‌های اسنپ باکس -->
+    <div id="modal-snappbox-profile-contact" class="modal" data-modal="snappbox-profile-contact">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تغییر عکس پروفایل</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Change profile picture-box.svg" alt="تغییر عکس پروفایل" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>۱. در صفحه اول اپلیکیشن روی گزینه <strong>سه خط</strong> بالا سمت راست بزنید.</li>
+                    <li>۲. روی تصویر پروفایلتان زده و گزینه «<strong>ویرایش</strong>» را انتخاب کنید.</li>
+                    <li>۳. روی علامت <strong>قلم کنار عکس پروفایل</strong> بزنید و عکس سلفی بگیرید.</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/OpenApp" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="https://l.snpp.link/box-app-profile" class="modal-btn modal-btn-secondary">آموزش مرحله به
+                        مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-snappbox-mobile-number" class="modal" data-modal="snappbox-mobile-number">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تغییر شماره موبایل</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Changing the mobile number - box.svg" alt="تغییر شماره موبایل"
+                        class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>۱. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>۲. به بخش تنظیمات بروید</li>
+                    <li>۳. روی "تغییر شماره موبایل" کلیک کنید</li>
+                    <li>۴. شماره جدید را وارد کنید</li>
+                    <li>۵. کد تایید را وارد کنید</li>
+                    <li>۶. تغییرات را تایید کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/OpenApp" class="modal-btn modal-btn-primary">ورود به اپلیکیشن</a>
+                    <a href="https://l.snpp.link/box-app-mobile" class="modal-btn modal-btn-secondary">آموزش مرحله به
+                        مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-snappbox-documents" class="modal" data-modal="snappbox-documents">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تکمیل مدارک</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Completion of documents - box.svg" alt="تکمیل مدارک" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای تکمیل مدارک خود:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "مدارک" بروید</li>
+                    <li>3. مدارک ناقص را شناسایی کنید</li>
+                    <li>4. عکس مدارک را آپلود کنید</li>
+                    <li>5. منتظر تایید بمانید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/box-app-license" class="modal-btn modal-btn-primary">ورود به
+                        اپلیکیشن</a>
+                    <a href="https://l.snpp.link/box-document" class="modal-btn modal-btn-secondary">مشاهده راهنما</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-snappbox-service-change" class="modal" data-modal="snappbox-service-change">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">تغییر سرویس کاربری</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Change user service-box.svg" alt="تغییر سرویس کاربری" class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای تغییر سرویس کاربری:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "تنظیمات سرویس" بروید</li>
+                    <li>3. سرویس مورد نظر را انتخاب کنید</li>
+                    <li>4. شرایط جدید را مطالعه کنید</li>
+                    <li>5. تغییرات را تایید کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/box-app-vehicle" class="modal-btn modal-btn-primary">ورود به
+                        اپلیکیشن</a>
+                    <a href="https://l.snpp.link/box-vehicle" class="modal-btn modal-btn-secondary">آموزش مرحله به
+                        مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-snappbox-app-support" class="modal" data-modal="snappbox-app-support">
+        <div class="modal-content">
+            <div class="modal-header" style="--modal-color: #FFFFFF; --modal-color-light: #FFFFFF;">
+                <span class="modal-close">&times;</span>
+                <h2 class="modal-title">پشتیبانی داخل برنامه</h2>
+                <div class="modal-icon">
+                    <img src="../Icon_Kayako/Support inside the application-box.svg" alt="پشتیبانی داخل برنامه"
+                        class="svg-icon">
+                </div>
+            </div>
+            <div class="modal-body">
+                <ul class="modal-content-list">
+                    <li>برای دریافت پشتیبانی:</li>
+                    <li>1. وارد اپلیکیشن اسنپ شوید</li>
+                    <li>2. به بخش "پشتیبانی" بروید</li>
+                    <li>3. موضوع مورد نظر را انتخاب کنید</li>
+                    <li>4. مشکل خود را توضیح دهید</li>
+                    <li>5. درخواست را ارسال کنید</li>
+                </ul>
+                <div class="modal-buttons">
+                    <a href="https://l.snpp.link/box-app-support" class="modal-btn modal-btn-primary">ورود به
+                        اپلیکیشن</a>
+                    <a href="https://l.snpp.link/box-support" class="modal-btn modal-btn-secondary">آموزش مرحله به
+                        مرحله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript برای عملکرد مودال‌های صفحه پشتیبانی آنلاین
+        document.addEventListener('DOMContentLoaded', function () {
+            // باز کردن مودال با کلیک روی کارت
+            const supportCards = document.querySelectorAll('.support-card');
+            supportCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById('modal-' + modalId);
+                    if (modal) {
+                        modal.style.display = 'block';
+                        setTimeout(() => {
+                            modal.classList.add('modal-open');
+                        }, 10);
+                    }
+                });
+            });
+
+            // بستن مودال با کلیک روی علامت X
+            const closeButtons = document.querySelectorAll('.modal-close');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const modal = this.closest('.modal');
+                    if (modal) {
+                        modal.classList.remove('modal-open');
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+
+            // بستن مودال با کلیک روی پس‌زمینه
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === this) {
+                        this.classList.remove('modal-open');
+                        setTimeout(() => {
+                            this.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+
+            // بستن مودال با کلید ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    const openModal = document.querySelector('.modal.modal-open');
+                    if (openModal) {
+                        openModal.classList.remove('modal-open');
+                        setTimeout(() => {
+                            openModal.style.display = 'none';
+                        }, 300);
+                    }
+                }
+            });
+            // ناوبری اجباری برای دیپ لینک‌ها
+            document.addEventListener('click', function (e) {
+                const a = e.target.closest('a');
+                if (!a) return;
+                // فقط برای دکمه‌های مودال
+                if (a.classList.contains('modal-btn-primary') || a.classList.contains('modal-btn-secondary')) {
+                    const href = a.getAttribute('href') || '#';
+                    if (href !== '#') {
+                        e.preventDefault();
+                        window.location.href = href;
+                    }
+                }
+            });
+            // ناوبری اجباری برای دیپ لینک‌ها روی هر دستگاه
+            document.addEventListener('click', function (e) {
+                const a = e.target.closest('a');
+                if (!a) return;
+                if (a.classList.contains('modal-btn-primary') || a.classList.contains('modal-btn-secondary')) {
+                    const href = a.getAttribute('href') || '#';
+                    if (href !== '#') {
+                        e.preventDefault();
+                        window.location.assign(href);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

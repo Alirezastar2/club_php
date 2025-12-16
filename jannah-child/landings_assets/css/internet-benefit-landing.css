@@ -1,0 +1,160 @@
+/* Internet Benefit Landing - isolated styles to avoid leaking to rest of theme */
+:root { 
+  --internet-bg: #2A42B0; 
+  --text-yellow: #FFCE00;
+  --text-white: #F3F3F3;
+}
+
+html, body { 
+  background: var(--internet-bg) !important; 
+  margin: 0;
+  padding: 0;
+}
+
+.internet-benefit-landing { 
+  background: var(--internet-bg) !important; 
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.internet-benefit-landing .hero { 
+  width: 100%; 
+  max-width: 420px; 
+  margin: 0 auto;
+  padding: 24px 16px 16px;
+}
+
+.internet-benefit-landing .hero picture, 
+.internet-benefit-landing .hero img { 
+  display: block; 
+  width: 100%; 
+  height: auto;
+  border-radius: 0;
+}
+
+.internet-benefit-landing .content {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+}
+
+.internet-benefit-landing .content-title {
+  color: var(--text-yellow);
+  font-family: IRANSansX, sans-serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 126.316% */
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.internet-benefit-landing .content-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text-white);
+  font-family: IRANSansX, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
+
+.internet-benefit-landing .content-list li {
+  position: relative;
+  padding-right: 20px;
+  margin-bottom: 16px;
+  text-align: right;
+}
+
+.internet-benefit-landing .content-list li::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-yellow);
+  border-radius: 50%;
+}
+
+.internet-benefit-landing .content-list li strong {
+  font-weight: 700;
+  color: var(--text-yellow);
+}
+
+.internet-benefit-landing .cta { 
+  width: 100%; 
+  max-width: 420px; 
+  padding: 16px 20px 40px; 
+  box-sizing: border-box;
+}
+
+.internet-benefit-landing .cta-text { 
+  color: #FFF;
+  font-family: IRANSansX, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .internet-benefit-landing .hero { 
+    max-width: 480px; 
+    margin-top: 40px; 
+    padding: 40px 20px 20px;
+  }
+  
+  .internet-benefit-landing .content {
+    max-width: 480px;
+    padding: 32px 24px;
+  }
+  
+  .internet-benefit-landing .content-title {
+    font-size: 19px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .internet-benefit-landing .content-list {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .internet-benefit-landing .cta { 
+    max-width: 480px; 
+    padding: 20px 20px 60px;
+  }
+  
+  .internet-benefit-landing .cta-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .internet-benefit-landing .hero { 
+    max-width: 600px; 
+  }
+  
+  .internet-benefit-landing .content {
+    max-width: 600px;
+  }
+  
+  .internet-benefit-landing .cta { 
+    max-width: 600px; 
+  }
+}
+

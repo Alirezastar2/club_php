@@ -1,0 +1,56 @@
+[
+  {
+    "id": "click_1736531234567_abc123",
+    "sessionId": "session_1736531234567",
+    "action": "play_button",
+    "playerData": {
+      "title": "مقدمه",
+      "audioSrc": "",
+      "audioDuration": 0,
+      "timestamp": "2025-01-11T20:47:14.567Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "screenResolution": "1920x1080",
+      "viewportSize": "1920x937",
+      "isMobile": false,
+      "referrer": "",
+      "url": "https://club.snapp.ir/kids_day"
+    },
+    "timestamp": "2025-01-11T20:47:14.567Z"
+  },
+  {
+    "id": "click_1736531234568_def456",
+    "sessionId": "session_1736531234567",
+    "action": "favorite_button",
+    "playerData": {
+      "title": "مقدمه",
+      "audioSrc": "",
+      "audioDuration": 0,
+      "timestamp": "2025-01-11T20:47:15.568Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "screenResolution": "1920x1080",
+      "viewportSize": "1920x937",
+      "isMobile": false,
+      "referrer": "",
+      "url": "https://club.snapp.ir/kids_day"
+    },
+    "timestamp": "2025-01-11T20:47:15.568Z"
+  },
+  {
+    "id": "click_1736531234569_ghi789",
+    "sessionId": "session_1736531234567",
+    "action": "play_button",
+    "playerData": {
+      "title": "قصه اول",
+      "audioSrc": "",
+      "audioDuration": 0,
+      "timestamp": "2025-01-11T20:47:16.569Z",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "screenResolution": "1920x1080",
+      "viewportSize": "1920x937",
+      "isMobile": false,
+      "referrer": "",
+      "url": "https://club.snapp.ir/kids_day"
+    },
+    "timestamp": "2025-01-11T20:47:16.569Z"
+  }
+]

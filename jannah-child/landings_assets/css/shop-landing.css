@@ -1,0 +1,64 @@
+/* Shop Landing - isolated styles to avoid leaking to rest of theme */
+:root { --shop-bg: #2A42B0; }
+
+html, body { background: var(--shop-bg) !important; }
+.shop-landing { 
+  background: var(--shop-bg) !important; 
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.shop-landing .hero { 
+  width: 100%; 
+  max-width: 420px; 
+  margin: 24px auto 16px; 
+}
+.shop-landing .hero picture, 
+.shop-landing .hero img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
+.shop-landing .cta { 
+  width: 100%; 
+  max-width: 420px; 
+  padding: 16px 20px 40px; 
+}
+
+.shop-landing .cta-btn { 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  align-self: stretch; 
+  width: 100%; 
+  min-height: 52px; 
+  background: #FFC21A; 
+  color: #1b1b1b; 
+  border-radius: 12px; 
+  text-decoration: none; 
+  font-weight: 700; 
+  font-size: 16px; 
+  line-height: 24px; 
+}
+
+@media (min-width: 768px) {
+  .shop-landing .hero { max-width: 480px; margin-top: 40px; }
+  .shop-landing .cta { max-width: 480px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

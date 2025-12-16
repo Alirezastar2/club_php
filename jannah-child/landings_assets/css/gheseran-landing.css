@@ -1,0 +1,760 @@
+/* Gheseran Landing - قصه ران */
+
+/* Hide menu/navigation for this landing page - Comprehensive */
+header,
+.site-header,
+.header-wrapper,
+.main-nav-wrapper,
+#main-nav,
+.main-menu-wrapper,
+.menu-components-wrap,
+.mobile-header-components,
+.header-layout-1-logo,
+.main-nav,
+.desktop-menu,
+.mobile-nav,
+.mobile-toggle,
+.off-canvas,
+.off-canvas-trigger,
+nav.main-nav,
+header.site-header,
+#site-header,
+.header-area,
+.header-main,
+.header-inner,
+.navbar,
+.navigation,
+.menu,
+.menu-item,
+.menu-wrapper,
+.header-menu,
+.site-navigation,
+.main-navigation,
+.header-nav,
+nav,
+header > *,
+body > header,
+body > .site-header,
+body > .header-wrapper {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+.main-nav-wrapper,
+.header-wrapper,
+.site-header {
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../fonts/IRANSansX.woff2") format("woff2"),
+    url("../fonts/IRANSansX.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: #020043 !important;
+  color: #ffffff !important;
+  direction: rtl;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Remove any body padding that might be added for header */
+body.admin-bar .gheseran-landing,
+body.logged-in .gheseran-landing {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.gheseran-landing {
+  min-height: 100vh;
+  display: block;
+  text-align: center;
+  padding: 24px 16px;
+  background: #020043 !important;
+  color: #ffffff !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #ffffff;
+}
+
+/* Hero Section */
+.gheseran-hero {
+  margin-bottom: 32px;
+}
+
+.hero-banner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 24px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 48px);
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  margin: 0 0 8px;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 600;
+  color: #a8d5e2;
+}
+
+.hero-dates {
+  margin: 0;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Introduction Section */
+.gheseran-intro {
+  margin: 32px auto;
+  max-width: 900px;
+  padding: 0 16px;
+}
+
+.intro-text {
+  color: #ffffff;
+  text-align: right;
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.8;
+  margin: 0;
+  padding: 24px;
+  background: transparent;
+}
+
+.intro-stars {
+  color: #ffffff;
+  font-size: 0.8em;
+  margin: 0 8px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: clamp(22px, 4vw, 32px);
+  font-weight: 700;
+  margin: 48px 0 32px;
+  color: #a8d5e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff, -2px -2px 0 #ffffff, 2px -2px 0 #ffffff,
+    -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+}
+
+.title-dots {
+  color: #a8d5e2;
+  font-size: 0.6em;
+}
+
+.title-stars {
+  color: #ffffff;
+  font-size: 0.6em;
+}
+
+.section-title-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 32px;
+}
+
+.section-title-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Competition Sections */
+.competition-sections {
+  margin: 48px 0;
+  padding: 0 16px;
+}
+
+.sections-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(8px, 2vw, 16px);
+  margin: 32px 0 48px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.section-icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-icon-item img {
+  width: clamp(60px, 8vw, 120px);
+  height: clamp(60px, 8vw, 120px);
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 0;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 4px;
+  margin: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.section-card-title {
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  margin: 0 0 16px;
+  color: #22a958;
+  text-align: right;
+}
+
+.section-card-desc {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin: 0 0 20px;
+  text-align: right;
+}
+
+/* Writing Section Specific */
+.writing-prompt {
+  background: transparent;
+  border-radius: 0;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: right;
+}
+
+.prompt-text {
+  margin: 0;
+  font-size: clamp(13px, 1.8vw, 15px);
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+.writing-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.writing-image-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.writing-image-item {
+  width: 100%;
+  max-width: 100%;
+}
+
+.writing-image-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 343 / 136;
+  display: block;
+  object-fit: cover;
+}
+
+.image-number {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  z-index: 10;
+}
+
+/* Prizes Section */
+.prizes-section {
+  margin: 48px 0;
+  padding: 0 16px;
+}
+
+.prizes-content {
+  max-width: 800px;
+  margin: 0;
+  text-align: right;
+}
+
+.prizes-text {
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2px;
+  letter-spacing: 0;
+  margin: 0 0 24px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.prize-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 2px 0;
+  text-align: right;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.prize-item {
+  background: transparent;
+  border-radius: 0;
+  padding: 2px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  text-align: right;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.prize-rank {
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.prize-amount {
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.prize-number,
+.prize-million {
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #22a958;
+}
+
+.prize-toman {
+  color: #ffffff;
+}
+
+.prizes-additional {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin: 32px 0 0;
+  padding: 0;
+  background: transparent;
+}
+
+.trophies-visual {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.trophies-visual img {
+  max-width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+/* Rules Section */
+.rules-section {
+  margin: 48px 0;
+  padding: 0 16px;
+}
+
+.rules-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.rules-list li {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.8;
+  color: #ffffff;
+  border: none;
+}
+
+/* Submission Section */
+.submission-section {
+  margin: 48px 0;
+  padding: 0 16px;
+}
+
+.submission-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.submission-text {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.submission-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 32px 0;
+  flex-direction: row;
+}
+
+.submission-btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: clamp(15px, 2.2vw, 18px);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.btn-telegram {
+  background: #020043;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-telegram:hover {
+  background: #030054;
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-direct {
+  background: #00a859;
+  color: #ffffff;
+}
+
+.btn-direct:hover {
+  background: #00b869;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.results-announcement {
+  font-size: clamp(15px, 2.2vw, 18px);
+  font-weight: 600;
+  color: #ffd700;
+  margin: 32px 0 0;
+  text-align: center;
+}
+
+/* Closing Message */
+.closing-message {
+  margin: 64px 0 32px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.closing-text {
+  font-size: clamp(20px, 3.5vw, 28px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.closing-subtext {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #a8d5e2;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .gheseran-landing {
+    padding: 16px 12px;
+  }
+
+  .gheseran-intro {
+    padding: 0 8px;
+  }
+
+  .intro-text {
+    padding: 16px;
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+
+  .competition-sections,
+  .prizes-section,
+  .rules-section,
+  .submission-section {
+    padding: 0 8px;
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .sections-icons {
+    gap: 8px;
+    margin: 24px 0 32px;
+  }
+
+  .section-icon-item img {
+    width: clamp(50px, 12vw, 70px);
+    height: clamp(50px, 12vw, 70px);
+    max-width: 100%;
+  }
+
+  .writing-images {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .writing-image-item {
+    width: 100%;
+  }
+
+  .writing-image-item img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .submission-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .submission-btn {
+    width: 100%;
+    min-width: auto;
+    flex: 1 1 auto;
+    padding: 14px 24px;
+    font-size: clamp(14px, 3.5vw, 16px);
+  }
+
+  .prize-list {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: clamp(20px, 5vw, 28px);
+    gap: 8px;
+    margin: 32px 0 24px;
+  }
+
+  .section-title-image {
+    margin: 32px 0 24px;
+  }
+
+  .section-title-image img {
+    max-width: 90%;
+  }
+
+  .title-dots,
+  .title-stars {
+    font-size: 0.5em;
+  }
+
+  .prizes-text,
+  .prize-rank,
+  .prize-amount {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+
+  .image-number {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    bottom: 6px;
+    right: 6px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gheseran-landing {
+    padding: 24px 20px;
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sections-icons {
+    gap: clamp(12px, 2vw, 20px);
+    margin: 32px 0 48px;
+  }
+
+  .section-icon-item img {
+    width: clamp(80px, 10vw, 110px);
+    height: clamp(80px, 10vw, 110px);
+    max-width: 100%;
+  }
+
+  .writing-images {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .writing-image-item {
+    width: 100%;
+  }
+
+  .writing-image-item img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .submission-buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .submission-btn {
+    flex: 1 1 auto;
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gheseran-landing {
+    padding: 32px 24px;
+  }
+
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sections-icons {
+    gap: clamp(16px, 2.5vw, 24px);
+    margin: 32px 0 48px;
+  }
+
+  .section-icon-item img {
+    width: clamp(100px, 8vw, 140px);
+    height: clamp(100px, 8vw, 140px);
+    max-width: 100%;
+  }
+
+  .writing-images {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .writing-image-item {
+    width: 100%;
+  }
+
+  .writing-image-item img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

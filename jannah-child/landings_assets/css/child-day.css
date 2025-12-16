@@ -1,0 +1,618 @@
+/* Child Day Landing - shared styles */
+
+@font-face {
+  font-family: "IRANSansX";
+  src: url("../fonts/IRANSansX.woff2") format("woff2"),
+    url("../fonts/IRANSansX.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: IRANSansX, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: #248a4a !important;
+  color: #ffffff !important;
+}
+
+.child-day-landing {
+  min-height: 100vh;
+  display: block;
+  text-align: center;
+  padding: 24px 16px;
+  background: #248a4a !important;
+  color: #ffffff !important;
+}
+
+.child-day-hero h1 {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: clamp(22px, 4vw, 40px);
+}
+
+.child-day-hero p {
+  margin: 0;
+  font-size: clamp(14px, 2.4vw, 18px);
+}
+
+.child-desc {
+  color: #ffffff;
+  text-align: center !important;
+  font-family: IRANSansX, inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 8px auto 24px;
+  max-width: 740px;
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+/* تقویت وسط‌چینی در همه حالت‌ها */
+.child-day-landing .child-desc {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* اطمینان از وسط‌چینی متن توضیح در دسکتاپ */
+@media (min-width: 1024px) {
+  .child-desc {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.child-cta {
+  color: #fdfa2f;
+  text-align: center;
+  font-family: IRANSansX, inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 16px;
+}
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+@media (max-width: 767px) {
+  .child-day-landing {
+    padding: 0 24px;
+  }
+  .hero-banner {
+    max-width: none;
+    margin: 0 auto 16px;
+    text-align: center;
+  }
+  .hero-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  .player-card,
+  .lock-card,
+  .countdown-wrap {
+    margin: 6px 24px 0;
+    width: calc(100% - 48px);
+    max-width: 520px;
+    min-width: 327px;
+    box-sizing: border-box;
+  }
+  .player-card {
+    margin: 32px 24px 0;
+    display: flex !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+  }
+
+  .player-card .player-btn {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    z-index: 100000 !important;
+    position: relative !important;
+  }
+}
+
+/* decorative svg block aligned to the right side under CTA */
+.decor-right {
+  width: 100%;
+  margin-top: 0px;
+  padding: 0;
+  text-align: right;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  right: 10px;
+  max-width: 1200px;
+}
+.decor-right img {
+  display: block;
+  height: auto;
+  transform: translateX(4px);
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  -o-transform: translateX(4px);
+}
+/* second decorative icon (left side), 127px below CTA and a bit outside */
+.decor-right-2 {
+  width: 100vw; /* تا لبه صفحه */
+  margin-top: 0px;
+  padding: 0; /* بدون پدینگ کناری */
+  text-align: left; /* چپ‌چین بصری */
+  overflow: visible; /* اجازه بیرون‌زدگی */
+  direction: ltr; /* اجبار به چپ فیزیکی در RTL */
+  position: absolute;
+  z-index: 5;
+  top: 80%;
+  left: 10px;
+  max-width: 1200px;
+}
+.decor-right-2 img {
+  display: block;
+  height: auto;
+  transform: translateX(-4px); /* کمی بیرون سمت چپ */
+  -webkit-transform: translateX(-4px);
+  -moz-transform: translateX(-4px);
+  -ms-transform: translateX(-4px);
+  -o-transform: translateX(-4px);
+}
+
+/* third decorative icon (moon), 127px below the previous */
+.decor-right-3 {
+  width: 100vw;
+  margin-top: 0px;
+  padding: 0;
+  text-align: right; /* مثل آیکون اول */
+  overflow: visible;
+  direction: rtl;
+  position: absolute;
+  z-index: 5;
+  top: 90%;
+  right: 10px;
+  max-width: 1200px;
+}
+.decor-right-3 img {
+  display: block;
+  height: auto;
+  transform: translateX(4px); /* کمی بیرون سمت راست */
+  -webkit-transform: translateX(4px);
+  -moz-transform: translateX(4px);
+  -ms-transform: translateX(4px);
+  -o-transform: translateX(4px);
+}
+
+/* جلوگیری از پوشاندن دکمه‌های پلیر توسط آیکون‌های تزئینی */
+.decor-right,
+.decor-right-2,
+.decor-right-3 {
+  pointer-events: none;
+}
+
+/* ================= Player Card ================= */
+.player-card {
+  background: rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  /*بدنهمطابقمشخصات*/
+  display: flex;
+  width: 100%;
+  max-width: 520px;
+  min-width: 327px;
+  /*ریسپانسیو:;
+  درموبایلتمام‌عرض،دربزرگ‌ترتااینعرض*/
+  padding: 10px 12px 12px 24px; /* نزدیک‌تر به لبه بالا */
+  /*فشرده‌ترتاداخلارتفاع116جاشود*/
+  flex-direction: column;
+  justify-content: flex-start; /* هدر بالا بماند */
+  align-items: center;
+  gap: 12px;
+  /*کاهشفاصلهعمودی*/
+  color: #fff;
+  /*وسط‌چینافقی+فاصلهازبالابیشتر*/
+  height: 116px;
+  /*طولکارتثابت*/
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10000;
+  margin: 32px auto 0;
+}
+.player-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: 100%;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  border-bottom: none;
+}
+.player-title {
+  font-family: IRANSansX, inherit;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  margin: 0;
+}
+.player-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row-reverse;
+}
+.player-actions img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.player-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+}
+.player-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.player-btn.play {
+  background: #ffffff;
+  color: #22a5ff;
+}
+.player-divider {
+  display: none;
+}
+.player-times {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.9;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin-top: 4px;
+  padding-top: 2px;
+  position: relative;
+  z-index: 10001; /* زیر نوار پیشرفت (که 10002 است) قرار گیرد */
+}
+.player-times #durTime {
+  order: 1;
+}
+.player-times #curTime {
+  order: 2;
+}
+.player-progress {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px; /* خط سفید نازک */
+  background: #ffffff; /* ترک سفید */
+  border-radius: 999px;
+  overflow: visible;
+  margin-top: 4px;
+  z-index: 10002;
+}
+.player-progress > .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  height: 100%;
+  background: #2fb4ff; /* قسمت پرشده آبی */
+  z-index: 10003;
+  border-radius: inherit;
+}
+.player-progress > .bar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 12px;
+  height: 12px;
+  background: #2fb4ff; /* رنگ دکمه */
+  border: 2px solid #ffffff; /* حاشیه سفید دور دکمه */
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.player-progress {
+  cursor: pointer;
+}
+
+/* ریسپانسیو آیکون‌های تزئینی */
+@media (max-width: 767px) {
+  .decor-right,
+  .decor-right-2,
+  .decor-right-3 {
+    right: 10px !important;
+    left: 10px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .player-card {
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 520px;
+    width: 100%;
+  }
+
+  /* بهبود تراز عمودی اعداد زمان در دسکتاپ */
+  .player-times {
+    margin-top: 0;
+    padding-top: 0;
+    transform: translateY(-2px);
+  }
+
+  .decor-right,
+  .decor-right-3 {
+    right: 30px !important;
+  }
+
+  .decor-right-2 {
+    left: 30px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .decor-right,
+  .decor-right-2,
+  .decor-right-3 {
+    display: none !important;
+  }
+}
+
+/* ================= Lock Card ================= */
+.lock-note {
+  color: #ffffff;
+  font-family: IRANSansX, inherit;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  margin: 12px 0 4px;
+}
+
+/* ================= Upload CTA ================= */
+.upload-cta {
+  margin: 24px auto 0;
+  max-width: 520px;
+  padding: 0 24px;
+  text-align: center;
+  padding-bottom: 96px; /* فاصله داخلی برای جدا شدن از کف صفحه */
+  background: #248a4a; /* هم‌رنگ پس‌زمینه صفحه */
+  position: relative;
+  z-index: 10050; /* بالاتر از کارت‌ها و لایه‌های تزیینی */
+}
+.upload-text {
+  color: #fdfa2f;
+  text-align: center;
+  font-family: IRANSansX;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 0 12px;
+}
+.upload-btn {
+  display: inline-flex !important;
+  z-index: 1000;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: #1bb8ff !important; /* اطمینان از نمایش رنگ در موبایل/WebView */
+  color: var(--Core-SNP-Primary-On-Primary, #fff);
+  text-align: center;
+  font-family: IRANSansX;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08) !important;
+  width: 100%;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10051; /* بالاتر از والد و سایر لایه‌ها */
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  box-sizing: border-box !important;
+  padding: 0 16px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: rgba(255,255,255,0.2) !important;
+  background-clip: padding-box !important;
+}
+/* حذف شبه‌عنصر برای جلوگیری از باگ رندر در WebView */
+.child-day-landing .upload-cta .upload-btn::before { content: none; }
+
+/* افزایش تخصص برای غلبه بر استایل‌های تم روی لینک‌ها در موبایل */
+.child-day-landing .upload-cta .upload-btn,
+.child-day-landing .upload-cta .upload-btn:link,
+.child-day-landing .upload-cta .upload-btn:visited,
+.child-day-landing .upload-cta .upload-btn:hover,
+.child-day-landing .upload-cta .upload-btn:active {
+  display: block !important;
+  width: 100% !important;
+  min-height: 48px !important;
+  padding: 12px 16px !important;
+  background: #1bb8ff !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 12px !important;
+  border: 0 !important;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.08) !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.upload-btn:active {
+  transform: translateY(1px);
+}
+.upload-btn:hover {
+  /* فقط رنگ متن مشکی شود؛ پس‌زمینه ثابت بماند */
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .upload-btn {
+    display: flex !important;
+  }
+}
+.lock-card {
+  display: flex;
+  width: 100%;
+  max-width: 520px;
+  height: 64px; /* ارتفاع خواسته‌شده */
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.06); /* همان پس‌زمینه پلیر */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* مثل پلیر */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  position: relative;
+  z-index: 10000;
+  margin: 16px auto 0; /* فاصله بیشتر بین کارت‌ها */
+  box-sizing: border-box; /* هم‌تراز با پلیر */
+}
+.lock-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row-reverse;
+  gap: 16px;
+} /* عنوان راست، آیکون چپ */
+.lock-title {
+  font-family: IRANSansX, inherit;
+  font-weight: 700;
+  color: #fff;
+  font-size: 18px;
+  text-align: right;
+  margin: 0;
+}
+.lock-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lock-icon img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+/* ================= Countdown ================= */
+.countdown {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: #248a4a;
+  font-family: IRANSansX, inherit;
+  font-size: 14px;
+  font-weight: 700;
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 6px 12px 6px 40px;
+  backdrop-filter: blur(6px);
+  position: relative;
+}
+.countdown::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: #54a3e8;
+  border-radius: 50%;
+}
+.countdown::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: url("https://club.snapp.ir/wp-content/uploads/2025/10/timer.svg")
+    no-repeat center/14px 14px;
+}
+.countdown .dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+}
+.countdown-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 520px;
+  margin: 32px auto 8px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9999;
+}
+.countdown-text {
+  color: var(--Core-SNP-Surface-Surface, #fff);
+  text-align: right;
+  font-family: IRANSansX, inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  flex: 1;
+}
