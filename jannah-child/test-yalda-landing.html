@@ -1,580 +1,991 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تست لندینگ یلدای باشگاه رانندگان اسنپ</title>
+    <link
+      rel="preload"
+      as="image"
+      href="https://club.snapp.ir/wp-content/uploads/2025/12/mobile-curve-empty.png"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="https://club.snapp.ir/wp-content/uploads/2025/12/curve-desktop-new.png"
+    />
+    <link rel="stylesheet" href="./landings_assets/css/yalda-landing.css" />
+    <style>
+      /* تضمین پس‌زمینه در تست مستقل */
+      html,
+      body {
+        background: #182460 !important;
+        margin: 0;
+        padding: 0;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تست لندینگ یلدای باشگاه رانندگان اسنپ</title>
-  <link rel="preload" as="image" href="https://club.snapp.ir/wp-content/uploads/2025/12/mobile-curve-empty.png" />
-  <link rel="preload" as="image" href="https://club.snapp.ir/wp-content/uploads/2025/12/curve-desktop-new.png" />
-  <link rel="stylesheet" href="./landings_assets/css/yalda-landing.css" />
-  <style>
-    /* تضمین پس‌زمینه در تست مستقل */
-    html,
-    body {
-      background: #182460 !important;
-      margin: 0;
-      padding: 0;
-    }
+      /* Hide menu/navigation for Yalda landing page - Comprehensive */
+      header,
+      .site-header,
+      .header-wrapper,
+      .main-nav-wrapper,
+      #main-nav,
+      .main-menu-wrapper,
+      .menu-components-wrap,
+      .mobile-header-components,
+      .header-layout-1-logo,
+      .main-nav,
+      .desktop-menu,
+      .mobile-nav,
+      .mobile-toggle,
+      .off-canvas,
+      .off-canvas-trigger,
+      nav.main-nav,
+      header.site-header,
+      #site-header,
+      .header-area,
+      .header-main,
+      .header-inner,
+      .navbar,
+      .navigation,
+      .menu,
+      .menu-item,
+      .menu-wrapper,
+      .header-menu,
+      .site-navigation,
+      .main-navigation,
+      .header-nav,
+      nav,
+      header > *,
+      body > header,
+      body > .site-header,
+      body > .header-wrapper {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: absolute !important;
+        left: -9999px !important;
+      }
 
-    /* Hide menu/navigation for Yalda landing page - Comprehensive */
-    header,
-    .site-header,
-    .header-wrapper,
-    .main-nav-wrapper,
-    #main-nav,
-    .main-menu-wrapper,
-    .menu-components-wrap,
-    .mobile-header-components,
-    .header-layout-1-logo,
-    .main-nav,
-    .desktop-menu,
-    .mobile-nav,
-    .mobile-toggle,
-    .off-canvas,
-    .off-canvas-trigger,
-    nav.main-nav,
-    header.site-header,
-    #site-header,
-    .header-area,
-    .header-main,
-    .header-inner,
-    .navbar,
-    .navigation,
-    .menu,
-    .menu-item,
-    .menu-wrapper,
-    .header-menu,
-    .site-navigation,
-    .main-navigation,
-    .header-nav,
-    nav,
-    header > *,
-    body > header,
-    body > .site-header,
-    body > .header-wrapper {
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      height: 0 !important;
-      width: 0 !important;
-      overflow: hidden !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      position: absolute !important;
-      left: -9999px !important;
-    }
+      .main-nav-wrapper,
+      .header-wrapper,
+      .site-header {
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
 
-    .main-nav-wrapper,
-    .header-wrapper,
-    .site-header {
-      height: 0 !important;
-      min-height: 0 !important;
-      max-height: 0 !important;
-      overflow: hidden !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
+      /* Remove any body padding that might be added for header */
+      body.admin-bar .yalda-landing,
+      body.logged-in .yalda-landing {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
 
-    /* Remove any body padding that might be added for header */
-    body.admin-bar .yalda-landing,
-    body.logged-in .yalda-landing {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
+      /* Ensure no spacing from header */
+      body {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
+    </style>
+  </head>
 
-    /* Ensure no spacing from header */
-    body {
-      padding-top: 0 !important;
-      margin-top: 0 !important;
-    }
-  </style>
-</head>
+  <body>
+    <main class="yalda-landing" role="main" aria-labelledby="headline">
+      <!-- Hero Section -->
+      <div class="yalda-hero">
+        <div class="hero-banner">
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                https://club.snapp.ir/wp-content/uploads/2025/12/mobile-curve-empty.png
+              "
+            />
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/curve-desktop-new.png"
+              alt="یلدای باشگاه رانندگان اسنپ"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
 
-<body>
-  <main class="yalda-landing" role="main" aria-labelledby="headline">
-    <!-- Hero Section -->
-    <div class="yalda-hero">
-      <div class="hero-banner">
-        <picture>
-          <source media="(max-width: 767px)" srcset="https://club.snapp.ir/wp-content/uploads/2025/12/mobile-curve-empty.png">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/curve-desktop-new.png" alt="یلدای باشگاه رانندگان اسنپ" loading="eager" decoding="async" />
-        </picture>
-        
-        <!-- لینک‌های شفاف برای آیکون‌های SVG موبایل -->
-        <div class="hero-icon-links">
-          <!-- آجیل (آیکون 5) -->
-          <a href="#" class="icon-link icon-link-ajil" data-yalda-modal="modal-ajil" aria-label="آجیل">
-            <span class="sr-only">آجیل</span>
-          </a>
-          
-          <!-- بلواوتلت (آیکون 4) -->
-          <a href="#" class="icon-link icon-link-bluvotelat" data-yalda-modal="modal-clothes" aria-label="بلواوتلت">
-            <span class="sr-only">بلواوتلت</span>
-          </a>
-          
-          <!-- خودرویی (آیکون 3) -->
-          <a href="#" class="icon-link icon-link-khodro" data-yalda-modal="modal-car" aria-label="خودرویی">
-            <span class="sr-only">خودرویی</span>
-          </a>
-          
-          <!-- کارپی (آیکون 2) -->
-          <a href="#" class="icon-link icon-link-karpi" data-yalda-modal="modal-toll" aria-label="کارپی">
-            <span class="sr-only">کارپی</span>
-          </a>
-          
-          <!-- بیمه (آیکون 1) -->
-          <a href="#" class="icon-link icon-link-bime" data-yalda-modal="modal-insurance" aria-label="بیمه">
-            <span class="sr-only">بیمه</span>
-          </a>
+          <!-- لینک‌های شفاف برای آیکون‌های SVG موبایل -->
+          <div class="hero-icon-links">
+            <!-- آجیل (آیکون 5) -->
+            <a
+              href="#"
+              class="icon-link icon-link-ajil"
+              data-yalda-modal="modal-ajil"
+              aria-label="آجیل"
+            >
+              <span class="sr-only">آجیل</span>
+            </a>
+
+            <!-- بلواوتلت (آیکون 4) -->
+            <a
+              href="#"
+              class="icon-link icon-link-bluvotelat"
+              data-yalda-modal="modal-clothes"
+              aria-label="بلواوتلت"
+            >
+              <span class="sr-only">بلواوتلت</span>
+            </a>
+
+            <!-- خودرویی (آیکون 3) -->
+            <a
+              href="#"
+              class="icon-link icon-link-khodro"
+              data-yalda-modal="modal-car"
+              aria-label="خودرویی"
+            >
+              <span class="sr-only">خودرویی</span>
+            </a>
+
+            <!-- کارپی (آیکون 2) -->
+            <a
+              href="#"
+              class="icon-link icon-link-karpi"
+              data-yalda-modal="modal-toll"
+              aria-label="کارپی"
+            >
+              <span class="sr-only">کارپی</span>
+            </a>
+
+            <!-- بیمه (آیکون 1) -->
+            <a
+              href="#"
+              class="icon-link icon-link-bime"
+              data-yalda-modal="modal-insurance"
+              aria-label="بیمه"
+            >
+              <span class="sr-only">بیمه</span>
+            </a>
+          </div>
+
+          <!-- آیکون‌های تصویری برای موبایل -->
+          <div class="hero-mobile-icons">
+            <!-- آجیل (چپ) -->
+            <a
+              href="#"
+              class="mobile-icon mobile-icon-ajil"
+              data-yalda-modal="modal-ajil"
+              aria-label="آجیل"
+            >
+              <img
+                src="https://club.snapp.ir/wp-content/uploads/2025/12/آجیل.png"
+                alt="آجیل"
+              />
+            </a>
+
+            <!-- بلواوتلت -->
+            <a
+              href="#"
+              class="mobile-icon mobile-icon-bluvotelat"
+              data-yalda-modal="modal-clothes"
+              aria-label="بلواوتلت"
+            >
+              <img
+                src="https://club.snapp.ir/wp-content/uploads/2025/12/بلواوتلت.png"
+                alt="بلواوتلت"
+              />
+            </a>
+
+            <!-- خودرویی (وسط) -->
+            <a
+              href="#"
+              class="mobile-icon mobile-icon-khodro"
+              data-yalda-modal="modal-car"
+              aria-label="خودرویی"
+            >
+              <img
+                src="https://club.snapp.ir/wp-content/uploads/2025/12/خودرویی.png"
+                alt="خودرویی"
+              />
+            </a>
+
+            <!-- کارپی -->
+            <a
+              href="#"
+              class="mobile-icon mobile-icon-karpi"
+              data-yalda-modal="modal-toll"
+              aria-label="کارپی"
+            >
+              <img
+                src="https://club.snapp.ir/wp-content/uploads/2025/12/کارپی.png"
+                alt="کارپی"
+              />
+            </a>
+
+            <!-- بیمه (راست) -->
+            <a
+              href="#"
+              class="mobile-icon mobile-icon-bime"
+              data-yalda-modal="modal-insurance"
+              aria-label="بیمه"
+            >
+              <img
+                src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه.png"
+                alt="بیمه"
+              />
+            </a>
+
+            <!-- اینترنت -->
+            <a
+              href="#"
+              class="mobile-icon mobile-icon-internet"
+              data-yalda-modal="modal-internet"
+              aria-label="اینترنت"
+            >
+              <img
+                src="https://club.snapp.ir/wp-content/uploads/2025/12/اینترنت.png"
+                alt="اینترنت"
+              />
+            </a>
+          </div>
         </div>
-        
-        <!-- آیکون‌های تصویری برای موبایل -->
-        <div class="hero-mobile-icons">
-          <!-- آجیل (چپ) -->
-          <a href="#" class="mobile-icon mobile-icon-ajil" data-yalda-modal="modal-ajil" aria-label="آجیل">
-            <img src="https://club.snapp.ir/wp-content/uploads/2025/12/آجیل.png" alt="آجیل" />
+      </div>
+
+      <!-- Introduction Section -->
+      <div class="yalda-intro">
+        <p class="intro-text">
+          یلدا بهونه‌ای برای یک دقیقه بیشتر کنار هم بودنه. به پاس همراهی همیشگی
+          شما تا شب یلدا با تخفیف‌های ویژه باشگاه رانندگان اسنپ در کنارتونیم تا
+          لحظه‌هاتون رو به یادموندنی‌تر کنیم.
+        </p>
+      </div>
+
+      <!-- Services/Offers Grid Section -->
+      <div class="services-section">
+        <div class="services-grid">
+          <!-- 1 آجیل -->
+          <div class="service-item" data-yalda-modal="modal-ajil">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/آجیل_-copy-1.webp"
+              alt="آجیل"
+              loading="lazy"
+            />
+          </div>
+          <!-- 2 لوازم خودرویی -->
+          <div class="service-item" data-yalda-modal="modal-car">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/لوازم-خودرویی-copy.webp"
+              alt="لوازم خودرویی"
+              loading="lazy"
+            />
+          </div>
+          <!-- 3 بلواوتلت (پوشاک) -->
+          <div class="service-item" data-yalda-modal="modal-clothes">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/بلو-اوتلت-copy.webp"
+              alt="بلواوتلت"
+              loading="lazy"
+            />
+          </div>
+          <!-- 4 تخفیف اینترنت -->
+          <div class="service-item" data-yalda-modal="modal-internet">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/اینترنت-copy.webp"
+              alt="اینترنت"
+              loading="lazy"
+            />
+          </div>
+          <!-- 5 خلافی -->
+          <div class="service-item" data-yalda-modal="modal-toll">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/خلافی-خودرو-copy.webp"
+              alt="خلافی خودرو"
+              loading="lazy"
+            />
+          </div>
+          <!-- 6 عوارض -->
+          <div class="service-item" data-yalda-modal="modal-toll-payment">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/پرداخت-عوارض-copy.webp"
+              alt="پرداخت عوارض"
+              loading="lazy"
+            />
+          </div>
+          <!-- 7 بیمه موبایل -->
+          <div class="service-item" data-yalda-modal="modal-insurance">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-موبایل-copy-1.webp"
+              alt="بیمه موبایل"
+              loading="lazy"
+            />
+          </div>
+          <!-- 8 بیمه بدنه -->
+          <div class="service-item" data-yalda-modal="modal-insurance">
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه-copy.webp"
+              alt="بیمه بدنه"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="social-section">
+        <p class="social-text">
+          با دنبال کردن شبکه‌های اجتماعی باشگاه رانندگان اسنپ زودتر از دیگران از
+          تسهیلات و تخفیف‌ها با خبر شوید.
+        </p>
+        <div class="social-buttons">
+          <a
+            href="https://www.instagram.com/drivers.snapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn btn-instagram"
+          >
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/Instagram.svg"
+              alt="Instagram"
+              class="btn-icon"
+            />
+            <span class="btn-text">اینستاگرام باشگاه رانندگان</span>
           </a>
-          
-          <!-- بلواوتلت -->
-          <a href="#" class="mobile-icon mobile-icon-bluvotelat" data-yalda-modal="modal-clothes" aria-label="بلواوتلت">
-            <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بلواوتلت.png" alt="بلواوتلت" />
-          </a>
-          
-          <!-- خودرویی (وسط) -->
-          <a href="#" class="mobile-icon mobile-icon-khodro" data-yalda-modal="modal-car" aria-label="خودرویی">
-            <img src="https://club.snapp.ir/wp-content/uploads/2025/12/خودرویی.png" alt="خودرویی" />
-          </a>
-          
-          <!-- کارپی -->
-          <a href="#" class="mobile-icon mobile-icon-karpi" data-yalda-modal="modal-toll" aria-label="کارپی">
-            <img src="https://club.snapp.ir/wp-content/uploads/2025/12/کارپی.png" alt="کارپی" />
-          </a>
-          
-          <!-- بیمه (راست) -->
-          <a href="#" class="mobile-icon mobile-icon-bime" data-yalda-modal="modal-insurance" aria-label="بیمه">
-            <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه.png" alt="بیمه" />
-          </a>
-          
-          <!-- اینترنت -->
-          <a href="#" class="mobile-icon mobile-icon-internet" data-yalda-modal="modal-internet" aria-label="اینترنت">
-            <img src="https://club.snapp.ir/wp-content/uploads/2025/12/اینترنت.png" alt="اینترنت" />
+          <a
+            href="https://t.me/snappdrivers"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-btn btn-telegram"
+          >
+            <img
+              src="https://club.snapp.ir/wp-content/uploads/2025/12/Telegram.svg"
+              alt="Telegram"
+              class="btn-icon"
+            />
+            <span class="btn-text">تلگرام باشگاه رانندگان</span>
           </a>
         </div>
       </div>
-    </div>
 
-    <!-- Introduction Section -->
-    <div class="yalda-intro">
-      <p class="intro-text">
-        یلدا یعنی کنار هم بودن، حتی به دقیقه بیشتر!
-      </p>
-      <p class="intro-text">
-        ما هم می‌خواهیم این لحظه‌های ناب رو با تخفیف‌های ویژه تا شب یلدا به شما تقدیم کنیم.
-      </p>
-      <p class="intro-text">
-        به پاس همراهی همیشگی‌تون، با این هدیه کنار شما هستیم که یلدای شما رو به یادموندی‌تر کنیم.
-      </p>
-    </div>
-
-    <!-- Services/Offers Grid Section -->
-    <div class="services-section">
-      <div class="services-grid">
-        <div class="service-item" data-yalda-modal="modal-ajil">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/آجیل_-copy.webp" alt="آجیل" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-internet">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/اینترنت-copy.webp" alt="اینترنت" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-clothes">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بلو-اوتلت-copy.webp" alt="بلواوتلت" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-insurance">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه-copy.webp" alt="بیمه بدنه" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-insurance">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-موبایل-copy.webp" alt="بیمه موبایل" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-toll">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/پرداخت-عوارض-copy.webp" alt="پرداخت عوارض" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-toll">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/خلافی-خودرو-copy.webp" alt="خلافی خودرو" loading="lazy" />
-        </div>
-        <div class="service-item" data-yalda-modal="modal-car">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/لوازم-خودرویی-copy.webp" alt="لوازم خودرویی" loading="lazy" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Social Media Section -->
-    <div class="social-section">
-      <p class="social-text">
-        با دنبال کردن شبکه‌های اجتماعی باشگاه رانندگان اسنپ زودتر از دیگران از تسهیلات و تخفیف‌ها با خبر شوید.
-      </p>
-      <div class="social-buttons">
-        <a href="https://instagram.com/clubsnapp" target="_blank" rel="noopener noreferrer" class="social-btn btn-instagram">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/Instagram.svg" alt="Instagram" class="btn-icon" />
-          <span class="btn-text">اینستاگرام باشگاه رانندگان</span>
-        </a>
-        <a href="https://t.me/clubsnapp" target="_blank" rel="noopener noreferrer" class="social-btn btn-telegram">
-          <img src="https://club.snapp.ir/wp-content/uploads/2025/12/Telegram.svg" alt="Telegram" class="btn-icon" />
-          <span class="btn-text">تلگرام باشگاه رانندگان</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Yalda Modals -->
-    <div class="yalda-modals">
+      <!-- Yalda Modals -->
+      <div class="yalda-modals">
         <!-- Modal: اینترنت -->
         <div class="yalda-modal" id="modal-internet" aria-hidden="true">
-            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-internet-title">
-                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
-                <div class="yalda-modal-header">
-                    <h2 class="yalda-modal-title" id="modal-internet-title">شارژ و بسته اینترنت</h2>
-                    <div class="yalda-modal-banner yalda-modal-banner--internet"></div>
-                </div>
-                <div class="yalda-modal-body">
-                    <p class="yalda-modal-text">
-                        تخفیف خرید شارژ سیمکارت و بسته اینترنت، در اپلیکیشن کاربران راننده اسنپ
-                    </p>
-                    <h3 class="yalda-modal-subtitle">قوانین</h3>
-                    <ul class="yalda-modal-list">
-                        <li>قابل استفاده فقط با شماره اسنپی</li>
-                        <li>ظرفیت محدود</li>
-                    </ul>
-                    <div class="yalda-modal-codes">
-                        <p class="yalda-code-title">کد تخفیف ۱۰ هزار تومانی ویژه خرید اول</p>
-                        <div class="yalda-code-row">
-                            <input type="text" class="yalda-code-input" value="BH34" readonly />
-                            <button type="button" class="yalda-code-copy" data-code="BH34">
-                                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg" alt="" class="yalda-code-copy-icon" />
-                                <span>کپی کردن</span>
-                            </button>
-                        </div>
-
-                        <p class="yalda-code-title">کد تخفیف ۵ هزار تومانی ویژه خرید دوم</p>
-                        <div class="yalda-code-row">
-                            <input type="text" class="yalda-code-input" value="VK43" readonly />
-                            <button type="button" class="yalda-code-copy" data-code="VK43">
-                                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg" alt="" class="yalda-code-copy-icon" />
-                                <span>کپی کردن</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="yalda-modal-footer">
-                    <button type="button" class="yalda-modal-cta">شروع خرید</button>
-                </div>
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-internet-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-internet-title">
+                شارژ و بسته اینترنت
+              </h2>
+              <div
+                class="yalda-modal-banner yalda-modal-banner--internet"
+              ></div>
             </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">
+                تخفیف خرید شارژ سیمکارت و بسته اینترنت، در اپلیکیشن کاربران
+                راننده اسنپ
+              </p>
+              <h3 class="yalda-modal-subtitle">قوانین</h3>
+              <ul class="yalda-modal-list">
+                <li>قابل استفاده فقط با شماره اسنپی</li>
+                <li>ظرفیت محدود</li>
+              </ul>
+              <div class="yalda-modal-codes">
+                <p class="yalda-code-title">
+                  کد تخفیف ۱۰ هزار تومانی ویژه خرید اول
+                </p>
+                <div class="yalda-code-row">
+                  <input
+                    type="text"
+                    class="yalda-code-input"
+                    value="BH34"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="yalda-code-copy"
+                    data-code="BH34"
+                  >
+                    <img
+                      src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg"
+                      alt=""
+                      class="yalda-code-copy-icon"
+                    />
+                    <span>کپی کردن</span>
+                  </button>
+                </div>
+
+                <p class="yalda-code-title">
+                  کد تخفیف ۵ هزار تومانی ویژه خرید دوم
+                </p>
+                <div class="yalda-code-row">
+                  <input
+                    type="text"
+                    class="yalda-code-input"
+                    value="VK43"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="yalda-code-copy"
+                    data-code="VK43"
+                  >
+                    <img
+                      src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg"
+                      alt=""
+                      class="yalda-code-copy-icon"
+                    />
+                    <span>کپی کردن</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="yalda-modal-footer">
+              <button
+                type="button"
+                class="yalda-modal-cta"
+                data-yalda-cta-url="https://l.snpp.link/CarPaySMS"
+              >
+                شروع خرید
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Modal: لوازم خودرویی -->
         <div class="yalda-modal" id="modal-car" aria-hidden="true">
-            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-car-title">
-                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
-                <div class="yalda-modal-header">
-                    <h2 class="yalda-modal-title" id="modal-car-title">لوازم خودرو</h2>
-                    <div class="yalda-modal-banner yalda-modal-banner--car"></div>
-                </div>
-                <div class="yalda-modal-body">
-                    <p class="yalda-modal-text">
-                        تا ۳۰٪ تخفیف لوازم خودرویی
-                    </p>
-                    <h3 class="yalda-modal-subtitle">مزایا</h3>
-                    <ul class="yalda-modal-list">
-                        <li>اقلام مصرفی: روغن موتور، فیلتر، لنت</li>
-                        <li>قطعات اصلی: لاستیک، باتری، دیسک و صفحه</li>
-                        <li>تجهیزات تکمیلی: جلوبندی، کفپوش و سایر لوازم</li>
-                    </ul>
-                </div>
-                <div class="yalda-modal-footer">
-                    <button type="button" class="yalda-modal-cta">شروع خرید</button>
-                </div>
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-car-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-car-title">
+                لوازم خودرو
+              </h2>
+              <div class="yalda-modal-banner yalda-modal-banner--car"></div>
             </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">تا ۳۰٪ تخفیف لوازم خودرویی</p>
+              <ul class="yalda-modal-list">
+                <li>اقلام مصرفی: روغن موتور، فیلتر، لنت</li>
+                <li>قطعات اصلی: لاستیک، باتری، دیسک و صفحه</li>
+                <li>تجهیزات تکمیلی: جلوبندی، کفپوش و سایر لوازم</li>
+              </ul>
+            </div>
+            <div class="yalda-modal-footer">
+              <button
+                type="button"
+                class="yalda-modal-cta"
+                data-yalda-cta-url="https://l.snpp.link/Shop"
+              >
+                شروع خرید
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Modal: تخفیف بیمه -->
         <div class="yalda-modal" id="modal-insurance" aria-hidden="true">
-            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-insurance-title">
-                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
-                <div class="yalda-modal-header">
-                    <h2 class="yalda-modal-title" id="modal-insurance-title">بیمه بدنه و شخص ثالث</h2>
-                    <div class="yalda-modal-banner yalda-modal-banner--insurance"></div>
-                </div>
-                <div class="yalda-modal-body">
-                    <p class="yalda-modal-text">
-                        تخفیف بیمه شخص ثالث و بیمه بدنه خودرو
-                    </p>
-                    <h3 class="yalda-modal-subtitle">مزایا</h3>
-                    <ul class="yalda-modal-list">
-                        <li>تا ۱۶٪ تخفیف بیمه شخص ثالث خودرو</li>
-                        <li>تا ۳۵٪ تخفیف بیمه بدنه خودرو</li>
-                    </ul>
-                    <div class="yalda-modal-codes">
-                        <p class="yalda-code-title">کد تخفیف ویژه کاربران راننده</p>
-                        <div class="yalda-code-row">
-                            <input type="text" class="yalda-code-input" value="YADR" readonly />
-                            <button type="button" class="yalda-code-copy" data-code="YADR">
-                                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg" alt="" class="yalda-code-copy-icon" />
-                                <span>کپی کردن</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="yalda-modal-footer">
-                    <button type="button" class="yalda-modal-cta">شروع خرید</button>
-                </div>
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-insurance-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-insurance-title">
+                بیمه موبایل
+              </h2>
+              <div
+                class="yalda-modal-banner yalda-modal-banner--insurance"
+              ></div>
             </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">تخفیف بیمه سرقت و خرابی موبایل</p>
+              <h3 class="yalda-modal-subtitle">مزایا</h3>
+              <ul class="yalda-modal-list">
+                <li>۸۵٪ تخفیف بیمه موبایل شامل:</li>
+                <li>جبران ۷۵٪ غرامت دستگاه در صورت سرقت</li>
+                <li>
+                  جبران ۷۵٪ خرابی (ضربه، شکستگی، نوسانات برق، آب‌دیدگی و ...)
+                </li>
+              </ul>
+              <div class="yalda-modal-codes">
+                <p class="yalda-code-title">کد تخفیف ویژه کاربران راننده</p>
+                <div class="yalda-code-row">
+                  <input
+                    type="text"
+                    class="yalda-code-input"
+                    value="YADR"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="yalda-code-copy"
+                    data-code="YADR"
+                  >
+                    <img
+                      src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg"
+                      alt=""
+                      class="yalda-code-copy-icon"
+                    />
+                    <span>کپی کردن</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="yalda-modal-footer">
+              <button
+                type="button"
+                class="yalda-modal-cta"
+                data-yalda-cta-url="https://l.snpy.ir/2vfd1"
+              >
+                شروع خرید
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Modal: کارپی / خلافی و عوارض -->
         <div class="yalda-modal" id="modal-toll" aria-hidden="true">
-            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-toll-title">
-                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
-                <div class="yalda-modal-header">
-                    <h2 class="yalda-modal-title" id="modal-toll-title">پرداخت عوارض آزادراهی</h2>
-                    <div class="yalda-modal-banner yalda-modal-banner--toll"></div>
-                </div>
-                <div class="yalda-modal-body">
-                    <p class="yalda-modal-text">
-                        استعلام رایگان خلافی خودرو و تخفیف پرداخت خلافی با اسنپ کارپی در اپلیکیشن کاربران راننده اسنپ
-                    </p>
-                    <h3 class="yalda-modal-subtitle">قوانین</h3>
-                    <ul class="yalda-modal-list">
-                        <li>قابل استفاده فقط با شماره اسنپی</li>
-                        <li>ویژه اولین استفاده از کارپی</li>
-                        <li>ظرفیت محدود</li>
-                    </ul>
-                    <div class="yalda-modal-codes">
-                        <p class="yalda-code-title">استعلام رایگان خلافی خودرو (برای اولین بار)</p>
-                        <div class="yalda-code-row">
-                            <input type="text" class="yalda-code-input" value="YLNQ" readonly />
-                            <button type="button" class="yalda-code-copy" data-code="YLNQ">
-                                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg" alt="" class="yalda-code-copy-icon" />
-                                <span>کپی کردن</span>
-                            </button>
-                        </div>
-
-                        <p class="yalda-code-title">کدتخفیف ۱۰هزارتومانی پرداخت خلافی (برای اولین پرداخت)</p>
-                        <div class="yalda-code-row">
-                            <input type="text" class="yalda-code-input" value="YLFN10" readonly />
-                            <button type="button" class="yalda-code-copy" data-code="YLFN10">
-                                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg" alt="" class="yalda-code-copy-icon" />
-                                <span>کپی کردن</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="yalda-modal-footer">
-                    <button type="button" class="yalda-modal-cta">شروع خرید</button>
-                </div>
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-toll-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-toll-title">
+                استعلام خلافی
+              </h2>
+              <div class="yalda-modal-banner yalda-modal-banner--toll"></div>
             </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">
+                استعلام رایگان خلافی خودرو و تخفیف پرداخت خلافی با اسنپ کارپی در
+                اپلیکیشن کاربران راننده اسنپ
+              </p>
+              <h3 class="yalda-modal-subtitle">قوانین</h3>
+              <ul class="yalda-modal-list">
+                <li>قابل استفاده فقط با شماره اسنپی</li>
+                <li>ویژه اولین استفاده از کارپی</li>
+                <li>ظرفیت محدود</li>
+              </ul>
+              <div class="yalda-modal-codes">
+                <p class="yalda-code-title">
+                  استعلام رایگان خلافی خودرو (برای اولین پرداخت)
+                </p>
+                <div class="yalda-code-row">
+                  <input
+                    type="text"
+                    class="yalda-code-input"
+                    value="YLNQ"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="yalda-code-copy"
+                    data-code="YLNQ"
+                  >
+                    <img
+                      src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg"
+                      alt=""
+                      class="yalda-code-copy-icon"
+                    />
+                    <span>کپی کردن</span>
+                  </button>
+                </div>
+
+                <p class="yalda-code-title">
+                  کدتخفیف ۱۰هزارتومانی پرداخت خلافی
+                </p>
+                <div class="yalda-code-row">
+                  <input
+                    type="text"
+                    class="yalda-code-input"
+                    value="YLFN10"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="yalda-code-copy"
+                    data-code="YLFN10"
+                  >
+                    <img
+                      src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg"
+                      alt=""
+                      class="yalda-code-copy-icon"
+                    />
+                    <span>کپی کردن</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="yalda-modal-footer">
+              <button
+                type="button"
+                class="yalda-modal-cta"
+                data-yalda-cta-url="https://l.snpp.link/topup"
+              >
+                شروع خرید
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal: پرداخت عوارض آزادراهی -->
+        <div class="yalda-modal" id="modal-toll-payment" aria-hidden="true">
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-toll-payment-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-toll-payment-title">
+                پرداخت عوارض آزادراهی
+              </h2>
+              <div
+                class="yalda-modal-banner yalda-modal-banner--toll-payment"
+              ></div>
+            </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">
+                تخفیف پرداخت عوارض آزادراهی با اسنپ کارپی در اپلیکیشن کاربران
+                راننده اسنپ
+              </p>
+              <h3 class="yalda-modal-subtitle">قوانین</h3>
+              <ul class="yalda-modal-list">
+                <li>قابل استفاده فقط با شماره اسنپی</li>
+                <li>ویژه اولین پرداخت عوارض</li>
+                <li>ظرفیت محدود</li>
+              </ul>
+              <div class="yalda-modal-codes">
+                <p class="yalda-code-title">
+                  کد تخفیف ۱۰ هزار تومانی پرداخت عوارض (برای اولین پرداخت)
+                </p>
+                <div class="yalda-code-row">
+                  <input
+                    type="text"
+                    class="yalda-code-input"
+                    value="YLFN10"
+                    readonly
+                  />
+                  <button
+                    type="button"
+                    class="yalda-code-copy"
+                    data-code="YLFN10"
+                  >
+                    <img
+                      src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg"
+                      alt=""
+                      class="yalda-code-copy-icon"
+                    />
+                    <span>کپی کردن</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="yalda-modal-footer">
+              <button
+                type="button"
+                class="yalda-modal-cta"
+                data-yalda-cta-url="https://l.snpp.link/topup"
+              >
+                شروع خرید
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Modal: بلواوتلت / پوشاک -->
         <div class="yalda-modal" id="modal-clothes" aria-hidden="true">
-            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-clothes-title">
-                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
-                <div class="yalda-modal-header">
-                    <h2 class="yalda-modal-title" id="modal-clothes-title">خرید پوشاک</h2>
-                    <div class="yalda-modal-banner yalda-modal-banner--clothes"></div>
-                </div>
-                <div class="yalda-modal-body">
-                    <p class="yalda-modal-text">
-                        خرید آنلاین لباس با تخفیف ویژه یلدا از فروشگاه‌های طرف همکاری
-                    </p>
-                    <h3 class="yalda-modal-subtitle">مزایا</h3>
-                    <ul class="yalda-modal-list">
-                        <li>تا ۶۳٪ تخفیف روی محصولات منتخب</li>
-                        <li>ارسال رایگان به سراسر ایران (ویژه یلدا)</li>
-                    </ul>
-                </div>
-                <div class="yalda-modal-footer">
-                    <button type="button" class="yalda-modal-cta">شروع خرید</button>
-                </div>
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-clothes-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-clothes-title">
+                خرید پوشاک
+              </h2>
+              <div class="yalda-modal-banner yalda-modal-banner--clothes"></div>
             </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">
+                خرید آنلاین لباس با تخفیف ویژه یلدا از فروشگاه‌های طرف همکاری
+              </p>
+              <h3 class="yalda-modal-subtitle">مزایا</h3>
+              <ul class="yalda-modal-list">
+                <li>تا ۶۳٪ تخفیف روی محصولات منتخب</li>
+                <li>ارسال رایگان به سراسر ایران (ویژه یلدا)</li>
+              </ul>
+            </div>
+            <div class="yalda-modal-footer">
+              <button
+                type="button"
+                class="yalda-modal-cta"
+                data-yalda-cta-url="https://blueoutlet.co/?utm_source=snapp&utm_medium=social&utm_campaign=snapp_yalda&utm_id=yalda1404"
+              >
+                شروع خرید
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Modal: آجیل -->
         <div class="yalda-modal" id="modal-ajil" aria-hidden="true">
-            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-ajil-title">
-                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
-                <div class="yalda-modal-header">
-                    <h2 class="yalda-modal-title" id="modal-ajil-title">آجیل شب یلدا</h2>
-                    <div class="yalda-modal-banner yalda-modal-banner--ajil"></div>
-                </div>
-                <div class="yalda-modal-body">
-                    <p class="yalda-modal-text">
-                        برای یه یلدای خوشمزه، هر چیزی لازم داری آمادست
-                    </p>
-                    <h3 class="yalda-modal-subtitle">مزایا</h3>
-                    <ul class="yalda-modal-list">
-                        <li>آجیل شب یلدا</li>
-                        <li>به علاوه ظروف پذیرایی، کتاب حافظ، دکوری، لباس و کلی انتخاب دیگه</li>
-                    </ul>
-                </div>
-                <div class="yalda-modal-footer">
-                    <button type="button" class="yalda-modal-cta">شروع خرید</button>
-                </div>
+          <div
+            class="yalda-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-ajil-title"
+          >
+            <button class="yalda-modal-close" type="button" aria-label="بستن">
+              ×
+            </button>
+            <div class="yalda-modal-header">
+              <h2 class="yalda-modal-title" id="modal-ajil-title">آجیل</h2>
+              <div class="yalda-modal-banner yalda-modal-banner--ajil"></div>
             </div>
+            <div class="yalda-modal-body">
+              <p class="yalda-modal-text">
+                برای یه یلدای خوشمزه، هر چیزی لازم داری آمادست
+              </p>
+              <h3 class="yalda-modal-subtitle">مزایا</h3>
+              <ul class="yalda-modal-list">
+                <li>آجیل شب یلدا</li>
+                <li>
+                  به علاوه ظروف پذیرایی، کتاب حافظ، دکوری، لباس و کلی انتخاب
+                  دیگه
+                </li>
+              </ul>
+            </div>
+            <div class="yalda-modal-footer">
+              <button type="button" class="yalda-modal-cta">شروع خرید</button>
+            </div>
+          </div>
         </div>
-    </div>
-  </main>
+      </div>
+    </main>
 
-  <script>
-    // Force hide menu/navigation after page load
-    (function() {
-      function hideMenu() {
-        var selectors = [
-          'header',
-          '.site-header',
-          '.header-wrapper',
-          '.main-nav-wrapper',
-          '#main-nav',
-          '.main-menu-wrapper',
-          '.menu-components-wrap',
-          '.mobile-header-components',
-          '.header-layout-1-logo',
-          '.main-nav',
-          '.desktop-menu',
-          '.mobile-nav',
-          '.mobile-toggle',
-          '.off-canvas',
-          '.off-canvas-trigger',
-          'nav.main-nav',
-          'header.site-header',
-          '#site-header',
-          '.header-area',
-          '.header-main',
-          '.header-inner',
-          '.navbar',
-          '.navigation',
-          '.menu',
-          '.menu-wrapper',
-          '.header-menu',
-          '.site-navigation',
-          '.main-navigation',
-          '.header-nav'
-        ];
-        
-        selectors.forEach(function(selector) {
-          var elements = document.querySelectorAll(selector);
-          elements.forEach(function(el) {
-            if (el) {
-              el.style.display = 'none';
-              el.style.visibility = 'hidden';
-              el.style.opacity = '0';
-              el.style.height = '0';
-              el.style.width = '0';
-              el.style.overflow = 'hidden';
-              el.style.margin = '0';
-              el.style.padding = '0';
-              el.style.position = 'absolute';
-              el.style.left = '-9999px';
+    <script>
+      // Force hide menu/navigation after page load
+      (function () {
+        function hideMenu() {
+          var selectors = [
+            "header",
+            ".site-header",
+            ".header-wrapper",
+            ".main-nav-wrapper",
+            "#main-nav",
+            ".main-menu-wrapper",
+            ".menu-components-wrap",
+            ".mobile-header-components",
+            ".header-layout-1-logo",
+            ".main-nav",
+            ".desktop-menu",
+            ".mobile-nav",
+            ".mobile-toggle",
+            ".off-canvas",
+            ".off-canvas-trigger",
+            "nav.main-nav",
+            "header.site-header",
+            "#site-header",
+            ".header-area",
+            ".header-main",
+            ".header-inner",
+            ".navbar",
+            ".navigation",
+            ".menu",
+            ".menu-wrapper",
+            ".header-menu",
+            ".site-navigation",
+            ".main-navigation",
+            ".header-nav",
+          ];
+
+          selectors.forEach(function (selector) {
+            var elements = document.querySelectorAll(selector);
+            elements.forEach(function (el) {
+              if (el) {
+                el.style.display = "none";
+                el.style.visibility = "hidden";
+                el.style.opacity = "0";
+                el.style.height = "0";
+                el.style.width = "0";
+                el.style.overflow = "hidden";
+                el.style.margin = "0";
+                el.style.padding = "0";
+                el.style.position = "absolute";
+                el.style.left = "-9999px";
+              }
+            });
+          });
+
+          // Remove body padding-top
+          document.body.style.paddingTop = "0";
+          document.body.style.marginTop = "0";
+        }
+
+        // Run immediately
+        hideMenu();
+
+        // Run after DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", hideMenu);
+        }
+
+        // Run after page is fully loaded
+        window.addEventListener("load", hideMenu);
+
+        // Run after a short delay to catch any late-loading elements
+        setTimeout(hideMenu, 100);
+        setTimeout(hideMenu, 500);
+        setTimeout(hideMenu, 1000);
+      })();
+
+      // Yalda modals - open on icon click
+      document.addEventListener("DOMContentLoaded", function () {
+        var body = document.body;
+
+        function openYaldaModal(id) {
+          var modal = document.getElementById(id);
+          if (!modal) return;
+          modal.classList.add("yalda-modal-open");
+          modal.setAttribute("aria-hidden", "false");
+          body.style.overflow = "hidden";
+        }
+
+        function closeYaldaModal(modal) {
+          if (!modal) return;
+          modal.classList.remove("yalda-modal-open");
+          modal.setAttribute("aria-hidden", "true");
+          body.style.overflow = "";
+        }
+
+        document
+          .querySelectorAll("[data-yalda-modal]")
+          .forEach(function (trigger) {
+            var targetId = trigger.getAttribute("data-yalda-modal");
+            if (!targetId) return;
+
+            trigger.addEventListener("click", function (e) {
+              e.preventDefault();
+              openYaldaModal(targetId);
+            });
+          });
+
+        document.querySelectorAll(".yalda-modal-close").forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            var modal = btn.closest(".yalda-modal");
+            closeYaldaModal(modal);
+          });
+        });
+
+        document.querySelectorAll(".yalda-modal").forEach(function (modal) {
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              closeYaldaModal(modal);
             }
           });
         });
-        
-        // Remove body padding-top
-        document.body.style.paddingTop = '0';
-        document.body.style.marginTop = '0';
-      }
-      
-      // Run immediately
-      hideMenu();
-      
-      // Run after DOM is ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', hideMenu);
-      }
-      
-      // Run after page is fully loaded
-      window.addEventListener('load', hideMenu);
-      
-      // Run after a short delay to catch any late-loading elements
-      setTimeout(hideMenu, 100);
-      setTimeout(hideMenu, 500);
-      setTimeout(hideMenu, 1000);
-    })();
 
-    // Yalda modals - open on icon click
-    document.addEventListener('DOMContentLoaded', function () {
-      var body = document.body;
-
-      function openYaldaModal(id) {
-        var modal = document.getElementById(id);
-        if (!modal) return;
-        modal.classList.add('yalda-modal-open');
-        modal.setAttribute('aria-hidden', 'false');
-        body.style.overflow = 'hidden';
-      }
-
-      function closeYaldaModal(modal) {
-        if (!modal) return;
-        modal.classList.remove('yalda-modal-open');
-        modal.setAttribute('aria-hidden', 'true');
-        body.style.overflow = '';
-      }
-
-      document.querySelectorAll('[data-yalda-modal]').forEach(function (trigger) {
-        var targetId = trigger.getAttribute('data-yalda-modal');
-        if (!targetId) return;
-
-        trigger.addEventListener('click', function (e) {
-          e.preventDefault();
-          openYaldaModal(targetId);
-        });
-      });
-
-      document.querySelectorAll('.yalda-modal-close').forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          var modal = btn.closest('.yalda-modal');
-          closeYaldaModal(modal);
-        });
-      });
-
-      document.querySelectorAll('.yalda-modal').forEach(function (modal) {
-        modal.addEventListener('click', function (e) {
-          if (e.target === modal) {
-            closeYaldaModal(modal);
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            var openModal = document.querySelector(
+              ".yalda-modal.yalda-modal-open"
+            );
+            if (openModal) {
+              closeYaldaModal(openModal);
+            }
           }
         });
-      });
 
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          var openModal = document.querySelector('.yalda-modal.yalda-modal-open');
-          if (openModal) {
-            closeYaldaModal(openModal);
+        // Copy discount codes in internet modal
+        function showCopyToast() {
+          var toast = document.getElementById("yalda-copy-toast");
+          if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "yalda-copy-toast";
+            toast.className = "yalda-toast";
+            toast.textContent = "کپی شد";
+            document.body.appendChild(toast);
           }
+          toast.classList.add("yalda-toast-show");
+          setTimeout(function () {
+            toast.classList.remove("yalda-toast-show");
+          }, 2000);
         }
-      });
 
-      // Copy discount codes in internet modal
-      document.querySelectorAll('.yalda-code-copy').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var code = btn.getAttribute('data-code');
-          if (!code) return;
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(code);
-          } else {
-            var temp = document.createElement('input');
-            temp.value = code;
-            document.body.appendChild(temp);
-            temp.select();
-            try {
-              document.execCommand('copy');
-            } catch (e) {}
-            document.body.removeChild(temp);
-          }
+        document.querySelectorAll(".yalda-code-copy").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var code = btn.getAttribute("data-code");
+            if (!code) return;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard
+                .writeText(code)
+                .then(function () {
+                  showCopyToast();
+                })
+                .catch(function () {
+                  showCopyToast();
+                });
+            } else {
+              var temp = document.createElement("input");
+              temp.value = code;
+              document.body.appendChild(temp);
+              temp.select();
+              try {
+                document.execCommand("copy");
+                showCopyToast();
+              } catch (e) {}
+              document.body.removeChild(temp);
+            }
+          });
         });
+
+        // Open external CTA links from modal buttons
+        document
+          .querySelectorAll(".yalda-modal-cta[data-yalda-cta-url]")
+          .forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var url = btn.getAttribute("data-yalda-cta-url");
+              if (!url) return;
+              // هدایت در همان تب برای جلوگیری از بلاک شدن توسط پاپ‌آپ بلاکر
+              window.location.href = url;
+            });
+          });
       });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
-
-
