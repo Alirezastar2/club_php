@@ -586,6 +586,10 @@ body {
 }
 
 .yalda-modal-banner--insurance {
+  background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-موبایل.webp");
+}
+
+.yalda-modal-banner--insurance-car {
   background-image: url("https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه.webp");
 }
 

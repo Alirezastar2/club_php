@@ -190,7 +190,7 @@ body {
                             </button>
                         </div>
 
-                        <p class="yalda-code-title">کد تخفیف ۵ هزار تومانی ویژه خرید دوم</p>
+                        <p class="yalda-code-title">کد تخفیف ۵ هزارتومانی ویژه خریدهای بعدی</p>
                         <div class="yalda-code-row">
                             <input type="text" class="yalda-code-input" value="VK43" readonly />
                             <button type="button" class="yalda-code-copy" data-code="VK43">
@@ -204,7 +204,7 @@ body {
                     <button
                         type="button"
                         class="yalda-modal-cta"
-                        data-yalda-cta-url="https://l.snpp.link/CarPaySMS"
+                        data-yalda-cta-url="https://l.snpp.link/topup"
                     >
                         شروع خرید
                     </button>
@@ -242,7 +242,7 @@ body {
             </div>
         </div>
 
-        <!-- Modal: تخفیف بیمه -->
+        <!-- Modal: تخفیف بیمه موبایل -->
         <div class="yalda-modal" id="modal-insurance" aria-hidden="true">
             <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-insurance-title">
                 <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
@@ -259,6 +259,46 @@ body {
                         <li>۸۵٪ تخفیف بیمه موبایل شامل:</li>
                         <li>جبران ۷۵٪ غرامت دستگاه در صورت سرقت</li>
                         <li>جبران ۷۵٪ خرابی (ضربه، شکستگی، نوسانات برق، آب‌دیدگی و ...)</li>
+                    </ul>
+                    <div class="yalda-modal-codes">
+                        <p class="yalda-code-title">کد تخفیف ویژه کاربران راننده</p>
+                        <div class="yalda-code-row">
+                            <input type="text" class="yalda-code-input" value="YADR" readonly />
+                            <button type="button" class="yalda-code-copy" data-code="YADR">
+                                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/copy.svg" alt="" class="yalda-code-copy-icon" />
+                                <span>کپی کردن</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="yalda-modal-footer">
+                    <button
+                        type="button"
+                        class="yalda-modal-cta"
+                        data-yalda-cta-url="https://l.snpy.ir/2vfd1"
+                    >
+                        شروع خرید
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: بیمه بدنه و شخص ثالث -->
+        <div class="yalda-modal" id="modal-insurance-car" aria-hidden="true">
+            <div class="yalda-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-insurance-car-title">
+                <button class="yalda-modal-close" type="button" aria-label="بستن">×</button>
+                <div class="yalda-modal-header">
+                    <h2 class="yalda-modal-title" id="modal-insurance-car-title">بیمه بدنه و شخص ثالث</h2>
+                    <div class="yalda-modal-banner yalda-modal-banner--insurance-car"></div>
+                </div>
+                <div class="yalda-modal-body">
+                    <p class="yalda-modal-text">
+                        تخفیف بیمه شخص ثالث و بیمه بدنه خودرو
+                    </p>
+                    <h3 class="yalda-modal-subtitle">مزایا</h3>
+                    <ul class="yalda-modal-list">
+                        <li>تا ۱۶٪ تخفیف بیمه شخص ثالث خودرو</li>
+                        <li>تا ۳۵٪ تخفیف بیمه بدنه خودرو</li>
                     </ul>
                     <div class="yalda-modal-codes">
                         <p class="yalda-code-title">کد تخفیف ویژه کاربران راننده</p>
@@ -325,7 +365,7 @@ body {
                     <button
                         type="button"
                         class="yalda-modal-cta"
-                        data-yalda-cta-url="https://l.snpp.link/topup"
+                        data-yalda-cta-url="https://l.snpp.link/CarPaySMS"
                     >
                         شروع خرید
                     </button>
@@ -352,7 +392,7 @@ body {
                         <li>ظرفیت محدود</li>
                     </ul>
                     <div class="yalda-modal-codes">
-                        <p class="yalda-code-title">کد تخفیف ۱۰ هزار تومانی پرداخت عوارض (برای اولین پرداخت)</p>
+                        <p class="yalda-code-title">استعلام رایگان خلافی خودرو (برای اولین بار)</p>
                         <div class="yalda-code-row">
                             <input type="text" class="yalda-code-input" value="YLFN10" readonly />
                             <button type="button" class="yalda-code-copy" data-code="YLFN10">
@@ -366,7 +406,7 @@ body {
                     <button
                         type="button"
                         class="yalda-modal-cta"
-                        data-yalda-cta-url="https://l.snpp.link/topup"
+                        data-yalda-cta-url="https://l.snpp.link/CarPaySMS"
                     >
                         شروع خرید
                     </button>
@@ -384,7 +424,7 @@ body {
                 </div>
                 <div class="yalda-modal-body">
                     <p class="yalda-modal-text">
-                        خرید آنلاین لباس با تخفیف ویژه یلدا از فروشگاه‌های طرف همکاری
+                        خرید آنلاین لباس بچه‌گانه، زنانه و مردانه با تخفیف
                     </p>
                     <h3 class="yalda-modal-subtitle">مزایا</h3>
                     <ul class="yalda-modal-list">
@@ -473,9 +513,9 @@ body {
             <div class="service-item" data-yalda-modal="modal-insurance">
                 <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-موبایل-copy-1.webp" alt="بیمه موبایل" />
             </div>
-            <!-- 8 بیمه بدنه -->
-            <div class="service-item" data-yalda-modal="modal-insurance">
-                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه-copy.webp" alt="بیمه بدنه" />
+            <!-- 8 بیمه بدنه و شخص ثالث -->
+            <div class="service-item" data-yalda-modal="modal-insurance-car">
+                <img src="https://club.snapp.ir/wp-content/uploads/2025/12/بیمه-بدنه-copy.webp" alt="بیمه بدنه و شخص ثالث" />
             </div>
         </div>
     </div>
